@@ -2,7 +2,7 @@
 layout: about
 title: About
 permalink: /
-subtitle: <a href='https://uwaterloo.ca/'>University of Waterloo</a>; <a href='https://vectorinstitute.ai/'>Vector Institute</a>; <a href='dongfu.jiang@uwaterloo.ca'>dongfu.jiang@uwaterloo.ca</a>
+subtitle: <a href='https://uwaterloo.ca/'>University of Waterloo</a>; <a href='https://vectorinstitute.ai/'>Vector Institute</a>;
 
 profile:
   align: right
@@ -20,7 +20,7 @@ social: true  # includes social icons at the bottom of the page
 
 I'm a first-year CS Ph.D. student at [University of Waterloo][7], advised by [Wenhu Chen][6]. I received my bachelor degree in Computer Science at [Zhejiang University][0], where I was fortunate to work closely with Prof. [Zhao Zhou][8]. I was a research intern at [USC INK-Lab][9], advised by Prof. [Xiang Ren][1] and [(Bill)Yuchen Lin][5]. 
 
-I’m interested in Natural Language Processing, especially Commonsense Reasoning, Text generation, and all sorts of application research of Large Language Models.
+I’m interested in Natural Language Processing, especially Commonsense Reasoning, Text generation, and AI research involved LLM.
 
 
 [0]: https://www.zju.edu.cn/english/
