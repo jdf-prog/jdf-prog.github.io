@@ -1,6 +1,30 @@
-"AJP":
-  url: https://aapt.scitation.org/journal/ajp
+"arXiv":
+  url: https://arxiv.org
+  color: "#f08080"
+"ACL":
+  url: https://aclanthology.org
+  color: "#dc143c"
+
+"NAACL":
+  url: https://naacl.org
+  color: "#dc143c"
+
+"EMNLP":
+  url: https://2021.emnlp.org
+  color: "#dc143c"
+
+"NIPS":
+  url: https://nips.cc
   color: "#00369f"
 
-"PhysRev":
-  url: https://journals.aps.org/
+"ICML":
+  url: https://icml.cc/
+  color: "#4682b4"
+
+"ICLR":
+  url: https://iclr.cc
+  color: "#4682b4"
+
+"CVPR":
+  url: https://cvpr.thecvf.com
+  color: "#00369f"
