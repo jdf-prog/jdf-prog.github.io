@@ -3,8 +3,8 @@ layout: cv
 permalink: /cv/
 title: CV
 nav: true
-nav_order: 4
-cv_pdf: dongfu_CV.pdf
+nav_order: 5
+cv_pdf: Dongfu_CV.pdf
 description: 
 toc:
   sidebar: left
