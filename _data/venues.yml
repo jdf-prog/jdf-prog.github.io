@@ -4,6 +4,9 @@
 "ACL":
   url: https://aclanthology.org
   color: "#dc143c"
+"ACL 2023":
+  url: https://aclanthology.org
+  color: "#dc143c"
 
 "NAACL":
   url: https://naacl.org
@@ -26,5 +29,8 @@
   color: "#4682b4"
 
 "CVPR":
+  url: https://cvpr.thecvf.com
+  color: "#00369f"
+"CVPR 2024":
   url: https://cvpr.thecvf.com
   color: "#00369f"
