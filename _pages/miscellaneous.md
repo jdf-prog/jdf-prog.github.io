@@ -2,7 +2,7 @@
 layout: page
 permalink: /Misc/
 title: Miscellaneous
-description: 
+description: talks, services, etc.
 nav: true
 nav_order: 3
 ---
@@ -14,10 +14,13 @@ nav_order: 3
 
 - [2023-07-27] [\[slides\]](https://docs.google.com/presentation/d/1UvTYEjIjpPGjrvBxtEmAtC06N-7xFFY9/edit?usp=sharing&ouid=112776303426789186559&rtpof=true&sd=true) Invited talk at AutoGPT reading group about [LLM-Blender](https://yuchenlin.xyz/LLM-Blender/). 
 
+---
+
 ## Services
 **I have served as a reviewer for the following conferences**
 
 - ACL 2023
+
 
 <!-- For now, this page is assumed to be a static description of your courses. You can convert it to a collection similar to `_projects/` so that you can have a dedicated page for each course.
 
