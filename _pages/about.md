@@ -22,9 +22,6 @@ I'm a first-year CS Ph.D. student at [University of Waterloo][7], advised by [We
 
 My research focus on General Artificial Intelligence and their applications. I am particularly interested in understanding the behavior of LLMs and and multimodality reasoning, as well as their evaluation.
 
-Reviewer Service:
-- ACL 2023
-
 [0]: https://www.zju.edu.cn/english/
 [1]: https://shanzhenren.github.io/
 [2]: https://aisecure.github.io/
