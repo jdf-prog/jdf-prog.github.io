@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Following vision arena, out [GenAI arena](https://huggingface.co/spaces/TIGER-Lab/GenAI-Arena) is now also online on HuggingFace! You can test popular image generation/editing models side by side here!
+[GenAI arena](https://huggingface.co/spaces/TIGER-Lab/GenAI-Arena) is now also online! You can test popular image generation/editing models here!
