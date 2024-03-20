@@ -18,10 +18,13 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-I'm a first-year CS Ph.D. student at [University of Waterloo][7], advised by [Wenhu Chen][6]. I received my bachelor degree in Computer Science at [Zhejiang University][0], where I was fortunate to work closely with Prof. [Zhao Zhou][8]. I was a research intern at [USC INK-Lab][9], advised by Prof. [Xiang Ren][1] and [(Bill)Yuchen Lin][5]. 
+I'm a first-year CS Ph.D. student at [University of Waterloo][7], advised by [Wenhu Chen][6]. I received my bachelor degree in Computer Science at [Zhejiang University][0], where I was fortunate to work closely with Prof. [Zhao Zhou][8]. I work closely with [(Bill)Yuchen Lin][5].
 
-I’m interested in Natural Language Processing, especially Commonsense Reasoning, Text generation, and AI research involved LLM.
+My research focus on General Artificial Intelligence and their applications. I am particularly interested in understanding the behavior of LLMs and and multimodality reasoning, as well as the evaluation of them. 
 
+## Services
+I am a reviewer for the following conferences:
+- ACL 2023
 
 [0]: https://www.zju.edu.cn/english/
 [1]: https://shanzhenren.github.io/
