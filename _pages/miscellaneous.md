@@ -16,6 +16,11 @@ nav_order: 3
 
 ---
 
+## Blogs
+- [2024-04-14] <img src="../assets/img/mantis-logo.png" alt="Mantis" style="height: 1em; vertical-align: middle;"> [Mantis: Interleaved Multi-Image Instruction Tuning](https://tiger-ai-lab.github.io/Blog/mantis).
+
+---
+
 ## Services
 **I have served as a reviewer for the following conferences**
 
