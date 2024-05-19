@@ -15,9 +15,18 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-I'm a first-year CS Ph.D. student at [University of Waterloo][7], advised by [Wenhu Chen][6]. I received my bachelor degree in Computer Science at [Zhejiang University][0], where I was fortunate to work closely with Prof. [Zhao Zhou][8]. I work closely with [(Bill)Yuchen Lin][5].
+I'm a first-year CS Ph.D. student of [TIGER-Lab][https://huggingface.co/TIGER-Lab] at [University of Waterloo][7], advised by Prof. [Wenhu Chen][6]. Previously, I received my bachelor degree in Computer Science at [Zhejiang University][0], advised Prof. [Zhao Zhou][8]. I was a research intern at USC INK-Lab advised by [Xiang Ren][1]. I am also an incoming summer intern at [Allen Institute for AI][11], where I will work with [(Bill)Yuchen Lin][5] and [Lianhui Qin][10]
 
 My research focus on General Artificial Intelligence and their applications. I am particularly interested in understanding the behavior of LLMs and and multimodality reasoning, as well as their evaluation.
+
+<b><span style="color: red; font-weight: bold;">Try out our 
+<a href="https://huggingface.co/spaces/TIGER-Lab/GenAI-Arena">
+  <img alt="Huggingface Collections" src="https://img.shields.io/badge/-🤗%20GenAI%20Arena-red?style=flat">
+</a>
+and 
+<a href="https://huggingface.co/spaces/WildVision/vision-arena">
+  <img alt="Huggingface Collections" src="https://img.shields.io/badge/-🤗%20Wildvision%20Arena-red?style=flat">
+</a>! We need your votes to help benchmarking multimodal generative models!</span></b>
 
 [0]: https://www.zju.edu.cn/english/
 [1]: https://shanzhenren.github.io/
@@ -29,7 +38,8 @@ My research focus on General Artificial Intelligence and their applications. I a
 [7]: https://uwaterloo.ca/
 [8]: https://scholar.google.com.hk/citations?user=IIoFY90AAAAJ&hl=zh-CN
 [9]: https://inklab.usc.edu/
-
+[10]: https://sites.google.com/view/lianhuiqin/home
+[11]: https://allenai.org/
 
 
 <!-- Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
