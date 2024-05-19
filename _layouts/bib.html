@@ -18,7 +18,7 @@
         <!-- Entry bib key -->
         <div id="{{entry.key}}" class="col-sm-8">
         <!-- Title -->
-        <div class="title">{{entry.title}}</div>
+        <div class="title"><a href="http://arxiv.org/abs/{{ entry.arxiv }}" style="color: inherit; text-decoration: none;">{{entry.title}}</a></div>
         <!-- Author -->
         <div class="author">
         {% assign author_array_size = entry.author_array | size %}
@@ -51,7 +51,7 @@
             {%- if forloop.last and author_array_limit == author_array_size -%}and&nbsp;{%- endif -%}
           {%- endif -%}
           {%- if author_is_self -%}
-            <em>{{author.first}} {{author.last}}</em>
+            <em><b>{{author.first}} {{author.last}}</b></em>
           {%- else -%}
             {%- if coauthor_url -%}
               <a href="{{coauthor_url}}">{{author.first}} {{author.last}}</a>
@@ -124,14 +124,18 @@
 
           <!-- Links/Buttons -->
           <div class="links">
-          {%- if entry.abstract %}
-            <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
-          {%- endif %}
           {%- if entry.arxiv %}
-            <a href="http://arxiv.org/abs/{{ entry.arxiv }}" class="btn btn-sm z-depth-0" role="button"><img alt="GitHub Repo stars" src="https://img.shields.io/badge/arXiv-{{entry.arxiv}}-b31b1b.svg"></a>
-            {%- endif %}
+          <a href="http://arxiv.org/abs/{{ entry.arxiv }}">
+            <img alt="GitHub Repo stars" src="https://img.shields.io/badge/arXiv-b31b1b.svg?logo=arXiv">
+          </a>
+          {%- endif %}
+          {%- if entry.abstract %}
+            <a class="abstract z-depth-0" role="button"><img alt="Abstract" src="https://img.shields.io/badge/-Abs-FFCC99?style=flat"></a>
+            <!-- <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a> -->
+          {%- endif %}
           {%- if entry.bibtex_show %}
-            <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a>
+            <!-- <img alt="Website" src="https://img.shields.io/badge/-Website-FFCC99?style=flat"> -->
+            <a class="bibtex z-depth-0" role="button"><img alt="Bibtex" src="https://img.shields.io/badge/-Bib-FFCC99?style=flat"></a>
           {%- endif %}
           {%- if entry.html %}
             <a href="{{ entry.html }}" class="btn btn-sm z-depth-0" role="button">HTML</a>
@@ -150,9 +154,6 @@
             <a href="{{ entry.supp | prepend: '/assets/pdf/' | relative_url }}" class="btn btn-sm z-depth-0" role="button">Supp</a>
             {%- endif %}
           {%- endif %}
-          {%- if entry.blog %}
-            <a href="{{ entry.blog }}" class="btn btn-sm z-depth-0" role="button">Blog</a>
-          {%- endif %}
           {%- if entry.code %}
             <a href="{{ entry.code }}" class="btn btn-sm z-depth-0" role="button">Code</a>
           {%- endif %}
@@ -165,19 +166,31 @@
           {%- endif %}
           {%- if entry.slides %}
             {% if entry.slides contains '://' -%}
-            <a href="{{ entry.slides }}" class="btn btn-sm z-depth-0" role="button">Slides</a>
+            <a href="{{ entry.slides }}" class="z-depth-0" role="button"><img alt="Website" src="https://img.shields.io/badge/-Slides-FFCC99?style=flat"></a>
             {%- else -%}
-            <a href="{{ entry.slides | prepend: '/assets/pdf/' | relative_url }}" class="btn btn-sm z-depth-0" role="button">Slides</a>
+            <a href="{{ entry.slides | prepend: '/assets/pdf/' | relative_url }}" class="z-depth-0" role="button"><img alt="Website" src="https://img.shields.io/badge/-Slides-FFCC99?style=flat"></a>
             {%- endif %}
           {%- endif %}
-          https://img.shields.io/github/stars/yuchenlin/LLM-Blender
           {%- if entry.website %}
-            <a href="{{ entry.website }}" class="btn btn-sm z-depth-0" role="button" style="background-color: #4CAF50; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: background-color 0.3s ease;">
-              Website
+            <a href="{{ entry.website }}">
+              <img alt="Website" src="https://img.shields.io/badge/-Website-FFCC99?style=flat">
             </a>
           {%- endif %}
+          {%- if entry.blog %}
+          <a href="{{ entry.blog }}">
+            <img alt="Blog" src="https://img.shields.io/badge/-Blog-FFCC99?style=flat">
+          </a>
+          {%- endif %}
+          {%- if entry.huggingface %}
+            <a href="{{ entry.huggingface }}">
+              <img alt="Huggingface Collections" src="https://img.shields.io/badge/-🤗%20Huggingface-red?style=flat">
+            </a>
+          {%- endif %}
+          {%- if entry.twitter %}
+            <a href="{{ entry.twitter }}"><img alt="X (formerly Twitter) URL" src="https://img.shields.io/badge/-Tweet-blue?style=flat&logo=twitter"></a>
+          {%- endif %}
           {%- if entry.github %}
-            <a href="https://github.com/{{ entry.github }}" class="btn btn-sm z-depth-0" role="button"><img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/{{ entry.github }}"></a>
+            <a href="https://github.com/{{ entry.github }}"><img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/{{ entry.github }}"></a>
           {%- endif %}
 
           
