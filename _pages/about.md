@@ -15,7 +15,7 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-I'm a first-year CS Ph.D. student of [TIGER-Lab][https://huggingface.co/TIGER-Lab] at [University of Waterloo][7], advised by Prof. [Wenhu Chen][6]. Previously, I received my bachelor degree in Computer Science at [Zhejiang University][0], advised Prof. [Zhao Zhou][8]. I was a research intern at USC INK-Lab advised by [Xiang Ren][1]. I am also an incoming summer intern at [Allen Institute for AI][11], where I will work with [(Bill)Yuchen Lin][5] and [Lianhui Qin][10]
+I'm a first-year CS Ph.D. student of [TIGER-Lab][12] at [University of Waterloo][7], advised by Prof. [Wenhu Chen][6]. Previously, I received my bachelor degree in Computer Science at [Zhejiang University][0], advised Prof. [Zhao Zhou][8]. I was a research intern at USC INK-Lab advised by [Xiang Ren][1]. I am also an incoming summer intern at [Allen Institute for AI][11], where I will work with [(Bill)Yuchen Lin][5] and [Lianhui Qin][10]
 
 My research focus on General Artificial Intelligence and their applications. I am particularly interested in understanding the behavior of LLMs and and multimodality reasoning, as well as their evaluation.
 
@@ -40,6 +40,7 @@ and
 [9]: https://inklab.usc.edu/
 [10]: https://sites.google.com/view/lianhuiqin/home
 [11]: https://allenai.org/
+[12]: https://huggingface.co/TIGER-Lab
 
 
 <!-- Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
