@@ -24,7 +24,8 @@ nav_order: 3
 ## Services
 **I have served as a reviewer for the following conferences**
 
-- ACL 2024
+- ACL ARR (2024)
+- NeurIPS (2024)
 
 
 <!-- For now, this page is assumed to be a static description of your courses. You can convert it to a collection similar to `_projects/` so that you can have a dedicated page for each course.
