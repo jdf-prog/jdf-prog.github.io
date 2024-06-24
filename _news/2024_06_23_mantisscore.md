@@ -1,8 +1,0 @@
----
-layout: post
-date: 2024-06-23 8:11:00-0700
-inline: true
-related_posts: false
----
-
-New preprint of [MantisScore](https://arxiv.org/abs/2406.15252) is out! Check our [project page](https://tiger-ai-lab.github.io/MantisScore/) for more details.
