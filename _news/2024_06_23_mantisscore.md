@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-New preprint of [MANTISScore](https://tiger-ai-lab.github.io/MantisScore/) is out! Check it out on [arXiv](https://arxiv.org/abs/2406.15252).
+New preprint of [MantisScore](https://arxiv.org/abs/2406.15252) is out! Check our [project page](https://tiger-ai-lab.github.io/MantisScore/) for more details.
