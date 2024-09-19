@@ -11,6 +11,10 @@
   url: https://aclanthology.org
   color: "#dc143c"
 
+"EMNLP 2024":
+  url: https://2024.emnlp.org/
+  color: "#dc143c"
+
 "NAACL":
   url: https://naacl.org
   color: "#dc143c"
