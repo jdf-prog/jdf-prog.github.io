@@ -4,7 +4,7 @@
 @inproceedings{he2024videoscore,
     title = "VideoScore: Building Automatic Metrics to Simulate Fine-grained Human Feedback for Video Generation",
     author = {Xuan He and Dongfu Jiang and Ge Zhang and Max Ku and Achint Soni and Sherman Siu and Haonan Chen and Abhranil Chandra and Ziyan Jiang and Aaran Arulraj and Kai Wang and Quy Duc Do and Yuansheng Ni and Bohan Lyu and Yaswanth Narsupalli and Rongqi Fan and Zhiheng Lyu and Bill Yuchen Lin and Wenhu Chen},
-    booktitle = "Proceedings of the 2024 Conference on Empirical Methods in Natural Language Processing",
+    booktitle = "Proceedings of EMNLP",
     month = nov,
     year = "2024",
     arxiv = "2406.15252",
@@ -22,6 +22,7 @@
     abbr={EMNLP 2024},
     bibtex_show={true},
 }
+
 @inproceedings{Lu2024WildVisionEV,
   title={WildVision: Evaluating Vision-Language Models in the Wild with Human Preferences},
   author={Yujie Lu and Dongfu Jiang and Wenhu Chen and William Yang Wang and Yejin Choi and Bill Yuchen Lin},
@@ -43,24 +44,23 @@
   bibtex_show={true},
 }
 
-
 @inproceedings{Jiang2024GenAIAA,
   title={GenAI Arena: An Open Evaluation Platform for Generative Models},
-  author={Dongfu Jiang and Max W.F. Ku and Tianle Li and Yuansheng Ni and Shizhuo Sun and Rongqi Fan and Wenhu Chen},
+  author={Dongfu Jiang and Max Ku and Tianle Li and Yuansheng Ni and Shizhuo Sun and Rongqi Fan and Wenhu Chen},
   booltitle = "Proceedings of NeurIPS 2024 Datasets and Benchmarks Track",
   address = "Vancouver, Canada",
   month={Dec},
   year={2024},
   url={https://openreview.net/forum?id=0Gmi8TkUC7#discussion},
   abstract = {Generative AI has made remarkable strides to revolutionize fields such as image and video generation. These advancements are driven by innovative algorithms, architecture, and data. However, the rapid proliferation of generative models has highlighted a critical gap: the absence of trustworthy evaluation metrics. Current automatic assessments such as FID, CLIP, FVD, etc often fail to capture the nuanced quality and user satisfaction associated with generative outputs. This paper proposes an open platform \arena to evaluate different image and video generative models, where users can actively participate in evaluating these models. By leveraging collective user feedback and votes, \arena aims to provide a more democratic and accurate measure of model performance. It covers three arenas for text-to-image generation, text-to-video generation, and image editing respectively. Currently, we cover a total of 27 open-source generative models. \arena has been operating for four months, amassing over 6000 votes from the community. We describe our platform, analyze the data, and explain the statistical methods for ranking the models. To further promote the research in building model-based evaluation metrics, we release a cleaned version of our preference data for the three tasks, namely GenAI-Bench. We prompt the existing multi-modal models like Gemini, GPT-4o to mimic human voting. We compute the correlation between model voting with human voting to understand their judging abilities. Our results show existing multimodal models are still lagging in assessing the generated visual content, even the best model GPT-4o only achieves a Pearson correlation of 0.22 in quality subscore, and behave like random guessing in others.},
-  github = "TIGER-AI-Lab/GenAI-Arena",
   abbr={NeurIPS 2024},
+  github={TIGER-AI-Lab/GenAI-Arena},
   preview={genai-arena.png},
   arxiv={2406.04485},
   huggingface="https://huggingface.co/spaces/TIGER-Lab/GenAI-Arena",
   selected = true,
+  num_co_first_author = {3},
   bibtex_show={true},
-  num_co_first_author = 3,
 }
 
 @article{jiang2024mantis,
@@ -87,7 +87,7 @@
 
 @inproceedings{Ku2023VIEScoreTE,
   title={VIEScore: Towards Explainable Metrics for Conditional Image Synthesis Evaluation},
-  author={Max W.F. Ku and Dongfu Jiang and Cong Wei and Xiang Yue and Wenhu Chen},
+  author={Max Ku and Dongfu Jiang and Cong Wei and Xiang Yue and Wenhu Chen},
   booktitle = "Proceedings of ACL",
   publisher = "Association for Computational Linguistics",
   month = aug,
