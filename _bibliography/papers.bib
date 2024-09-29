@@ -3,7 +3,7 @@
 
 @inproceedings{he2024videoscore,
     title = "VideoScore: Building Automatic Metrics to Simulate Fine-grained Human Feedback for Video Generation",
-    author = {Xuan He and Dongfu Jiang and Ge Zhang and Max Ku and Achint Soni and Sherman Siu and Haonan Chen and Abhranil Chandra and Ziyan Jiang and Aaran Arulraj and Kai Wang and Quy Duc Do and Yuansheng Ni and Bohan Lyu and Yaswanth Narsupalli and Rongqi Fan and Zhiheng Lyu and Yuchen Lin and Wenhu Chen},
+    author = {Xuan He and Dongfu Jiang and Ge Zhang and Max Ku and Achint Soni and Sherman Siu and Haonan Chen and Abhranil Chandra and Ziyan Jiang and Aaran Arulraj and Kai Wang and Quy Duc Do and Yuansheng Ni and Bohan Lyu and Yaswanth Narsupalli and Rongqi Fan and Zhiheng Lyu and Bill Yuchen Lin and Wenhu Chen},
     booktitle = "Proceedings of the 2024 Conference on Empirical Methods in Natural Language Processing",
     month = nov,
     year = "2024",
@@ -18,16 +18,19 @@
     twitter="https://twitter.com/DongfuJiang/status/1805438506137010326",
     selected = true,
     num_co_first_author = 2,
+    abbr={EMNLP 2024},
     bibtex_show={true},
 }
-
-
 @inproceedings{Lu2024WildVisionEV,
   title={WildVision: Evaluating Vision-Language Models in the Wild with Human Preferences},
   author={Yujie Lu and Dongfu Jiang and Wenhu Chen and William Yang Wang and Yejin Choi and Bill Yuchen Lin},
-  booltitle={NeurIPS 2024 Datasets and Benchmarks Track},
+  booktitle = "Proceedings of NeurIPS 2024 Datasets and Benchmarks Track",
+  month={Dec},
   year={2024},
-  url={https://arxiv.org/abs/2406.11069},
+  url={https://openreview.net/forum?id=i92eyFCQHC#discussion},
+  abstract={Recent breakthroughs in vision-language models (VLMs) emphasize the necessity of benchmarking human preferences in real-world multimodal interactions. To address this gap, we launched WildVision-Arena (WV-Arena), an online platform that collects human preferences to evaluate VLMs. We curated WV-Bench by selecting 500 high-quality samples from 8,000 user submissions in WV-Arena. WV-Bench uses GPT-4 as the judge to compare each VLM with Claude-3-Sonnet, achieving a Spearman correlation of 0.94 with the WV-Arena Elo. This significantly outperforms other benchmarks like MMVet, MMMU, and MMStar.
+
+  Our comprehensive analysis of 20K real-world interactions reveals important insights into the failure cases of top-performing VLMs. For example, we find that although GPT-4V surpasses many other models like Reka-Flash, Opus, and Yi-VL-Plus in simple visual recognition and reasoning tasks, it still faces challenges with subtle contextual cues, spatial reasoning, visual imagination, and expert domain knowledge. Additionally, current VLMs exhibit issues with hallucinations and safety when intentionally provoked. We are releasing our chat and feedback data to further advance research in the field of VLMs.},
   abbr={NeurIPS 2024 (D/B)},
   preview={wildvision.png},
   arxiv={2406.11069},
@@ -41,7 +44,8 @@
 @inproceedings{Jiang2024GenAIAA,
   title={GenAI Arena: An Open Evaluation Platform for Generative Models},
   author={Dongfu Jiang and Max W.F. Ku and Tianle Li and Yuansheng Ni and Shizhuo Sun and Rongqi Fan and Wenhu Chen},
-  booltitle={NeurIPS 2024 Datasets and Benchmarks Track},
+  booltitle = "Proceedings of NeurIPS 2024 Datasets and Benchmarks Track",
+  month={Dec},
   year={2024},
   url={https://arxiv.org/abs/2406.04485},
   github = "TIGER-AI-Lab/GenAI-Arena",
@@ -78,10 +82,15 @@
 @inproceedings{Ku2023VIEScoreTE,
   title={VIEScore: Towards Explainable Metrics for Conditional Image Synthesis Evaluation},
   author={Max W.F. Ku and Dongfu Jiang and Cong Wei and Xiang Yue and Wenhu Chen},
-  booktitle={ACL},
+  booktitle = "Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)",
+  publisher = "Association for Computational Linguistics",
+  month = aug,
   year={2024},
   volume={abs/2312.14867},
-  url={https://arxiv.org/abs/2312.14867},
+  url = "https://aclanthology.org/2024.acl-long.663",
+  doi = "10.18653/v1/2024.acl-long.663",
+  pages = "12268--12290",
+  abstract = "In the rapidly advancing field of conditional image generation research, challenges such as limited explainability lie in effectively evaluating the performance and capabilities of various models. This paper introduces VIEScore, a Visual Instruction-guided Explainable metric for evaluating any conditional image generation tasks. VIEScore leverages general knowledge from Multimodal Large Language Models (MLLMs) as the backbone and does not require training or fine-tuning. We evaluate VIEScore on seven prominent tasks in conditional image tasks and found: (1) VIEScore (GPT4-o) achieves a high Spearman correlation of 0.4 with human evaluations, while the human-to-human correlation is 0.45. (2) VIEScore (with open-source MLLM) is significantly weaker than GPT-4o and GPT-4v in evaluating synthetic images. (3) VIEScore achieves a correlation on par with human ratings in the generation tasks but struggles in editing tasks. With these results, we believe VIEScore shows its great potential to replace human judges in evaluating image synthesis tasks.",
   website = "https://tiger-ai-lab.github.io/VIEScore/",
   github = "TIGER-AI-Lab/VIEScore",
   abbr={ACL 2024},
@@ -109,6 +118,7 @@
   abbr={CVPR 2024},
   num_co_first_author = 4,
 }
+
 
 @article{jiang2024tigerscore,
   title={{TIGERS}core: Towards Building Explainable Metric for All Text Generation Tasks},
@@ -140,7 +150,7 @@
   author = "Jiang, Dongfu  and
     Ren, Xiang  and
     Lin, Bill Yuchen",
-  booktitle = "ACL",
+  booktitle = "Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)",
   month = jul,
   year = "2023",
   address = "Toronto, Canada",
@@ -161,4 +171,3 @@
   preview={llm_blender_preview.png},
   arxiv={2306.02561},
 }
-
