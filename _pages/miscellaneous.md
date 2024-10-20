@@ -27,7 +27,7 @@ nav_order: 3
 - ACL ARR (2024)
 - NeurIPS (2024)
 - ICLR (2024)
-- TMLR
+- TMLR (2024)
 - AISTATS (2025)
 
 
