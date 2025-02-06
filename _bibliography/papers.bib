@@ -1,6 +1,45 @@
 ---
 ---
 
+@inproceedings{Zeng2025ACECODERAC,
+  title={ACECODER: Acing Coder RL via Automated Test-Case Synthesis},
+  author={Huaye Zeng and Dongfu Jiang and Haozhe Wang and Ping Nie and Xiaotong Chen and Wenhu Chen},
+  booktitle = "arxiv preprint",
+  month = Feb,
+  year = "2025",
+  arxiv = "2502.01718",
+  abstract = "Most progress in recent coder models has been driven by supervised fine-tuning (SFT), while the potential of reinforcement learning (RL) remains largely unexplored, primarily due to the lack of reliable reward data/model in the code domain. In this paper, we address this challenge by leveraging automated large-scale test-case synthesis to enhance code model training. Specifically, we design a pipeline that generates extensive (question, test-cases) pairs from existing code data. Using these test cases, we construct preference pairs based on pass rates over sampled programs to train reward models with Bradley-Terry loss. It shows an average of 10-point improvement for Llama-3.1-8B-Ins and 5-point improvement for Qwen2.5-Coder-7B-Ins through best-of-32 sampling, making the 7B model on par with 236B DeepSeek-V2.5. Furthermore, we conduct reinforcement learning with both reward models and test-case pass rewards, leading to consistent improvements across HumanEval, MBPP, BigCodeBench, and LiveCodeBench (V4). Notably, we follow the R1-style training to start from Qwen2.5-Coder-base directly and show that our RL training can improve model on HumanEval-plus by over 25\% and MBPP-plus by 6\% for merely 80 optimization steps. We believe our results highlight the huge potential of reinforcement learning in coder models.",
+  preview={acecoder.png},
+  website = "https://tiger-ai-lab.github.io/AceCoder/",
+  github = "TIGER-AI-Lab/AceCoder",
+  huggingface="https://huggingface.co/collections/TIGER-Lab/acecoder-67a16011a6c7d65cad529eba",
+  twitter="https://x.com/DongfuJiang/status/1886828310841204859",
+  selected = true,
+  num_co_first_author = 2,
+  abbr={Arxiv},
+  bibtex_show={true}
+}
+
+@inproceedings{Chen2024MEGABenchSM,
+    title={{MEGA}-Bench: Scaling Multimodal Evaluation to over 500 Real-World Tasks},
+    author={Jiacheng Chen and Tianhao Liang and Sherman Siu and Zhengqing Wang and Kai Wang and Yubo Wang and Yuansheng Ni and Ziyan Jiang and Wang Zhu and Bohan Lyu and Dongfu Jiang and Xuan He and Yuan Liu and Hexiang Hu and Xiang Yue and Wenhu Chen},
+    booktitle={The Thirteenth International Conference on Learning Representations},
+    year={2025},
+    url={https://openreview.net/forum?id=2rWbKbmOuM},
+    address = "Singapore EXPO",
+    arxiv = "2410.10563",
+    abstract = "We present MEGA-Bench, an evaluation suite that scales multimodal evaluation to over 500 real-world tasks, to address the highly heterogeneous daily use cases of end users. Our objective is to optimize for a set of high-quality data samples that cover a highly diverse and rich set of multimodal tasks, while enabling cost-effective and accurate model evaluation. In particular, we collected 505 realistic tasks encompassing over 8,000 samples from 16 expert annotators to extensively cover the multimodal task space. Instead of unifying these problems into standard multi-choice questions (like MMMU, MMBench, and MMT-Bench), we embrace a wide range of output formats like numbers, phrases, code, \LaTeX, coordinates, JSON, free-form, etc. To accommodate these formats, we developed over 40 metrics to evaluate these tasks. Unlike existing benchmarks, MEGA-Bench offers a fine-grained capability report across multiple dimensions (e.g., application, input type, output format, skill), allowing users to interact with and visualize model capabilities in depth. We evaluate a wide variety of frontier vision-language models on MEGA-Bench to understand their capabilities across these dimensions.",
+    preview={megabench_preview.png},
+    website = "https://tiger-ai-lab.github.io/MEGA-Bench/",
+    github = "TIGER-AI-Lab/MEGA-Bench",
+    huggingface="https://huggingface.co/spaces/TIGER-Lab/MEGA-Bench",
+    twitter="https://x.com/WenhuChen/status/1846692920117678384",
+    selected = false,
+    num_co_first_author = 3,
+    abbr={Arxiv},
+    bibtex_show={true},
+}
+
 @inproceedings{he2024videoscore,
     title = "VideoScore: Building Automatic Metrics to Simulate Fine-grained Human Feedback for Video Generation",
     author = {Xuan He and Dongfu Jiang and Ge Zhang and Max Ku and Achint Soni and Sherman Siu and Haonan Chen and Abhranil Chandra and Ziyan Jiang and Aaran Arulraj and Kai Wang and Quy Duc Do and Yuansheng Ni and Bohan Lyu and Yaswanth Narsupalli and Rongqi Fan and Zhiheng Lyu and Bill Yuchen Lin and Wenhu Chen},
