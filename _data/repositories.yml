@@ -3,7 +3,9 @@ github_users:
 
 github_repos:
   - yuchenlin/LLM-Blender
-  - jdf-prog/LLM-Gen
-  - TIGER-AI-Lab/TIGERScore
+  - TIGER-AI-Lab/verl-tool
   - TIGER-AI-Lab/Mantis
-  - jdf-prog/easy-openai
+  - TIGER-AI-Lab/AceCoder
+  - TIGER-AI-Lab/VideoScore
+  - TIGER-AI-Lab/QuickVideo
+  - jdf-prog/LLM-Engines

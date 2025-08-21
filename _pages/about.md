@@ -15,18 +15,9 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-I'm a second-year CS Ph.D. student of [TIGER-Lab][12] at [University of Waterloo][7], advised by Prof. [Wenhu Chen][6]. Previously, I received my bachelor degree in Computer Science at [Zhejiang University][0]. I have interned at at [Allen Institute for AI][11] in summer 2024, supervised by [Bill Yuchen Lin][5] and [Lianhui Qin][10].
+I'm a second-year CS Ph.D. student of [TIGER-Lab][12] at [University of Waterloo][7], advised by Prof. [Wenhu Chen][6]. Previously, I received my bachelor degree in Computer Science at [Zhejiang University][0]. I am currently interning at [NVIDIA ADLR]([13]) at Santa Clara. 
 
-My research focus on General Artificial Intelligence and their applications. I am particularly interested in understanding the behavior of LLMs and and multimodality reasoning, as well as their evaluation.
-
-<b><span style="color: red; font-weight: bold;">Try out our 
-<a href="https://huggingface.co/spaces/TIGER-Lab/GenAI-Arena">
-  <img alt="Huggingface Collections" src="https://img.shields.io/badge/-🤗%20GenAI%20Arena-red?style=flat">
-</a>
-and 
-<a href="https://huggingface.co/spaces/WildVision/vision-arena">
-  <img alt="Huggingface Collections" src="https://img.shields.io/badge/-🤗%20Wildvision%20Arena-red?style=flat">
-</a>! We need your votes to help benchmarking multimodal generative models!</span></b>
+My research focus on LLM/VLM-post training, including alignment, evaluation, and applications. Recently I am particularly interested in reinforcement learning for reasoning tasks and how they can better use tools to solve problems. I built [VerlTool](https://github.com/TIGER-AI-Lab/verl-tool) as an initial exploration of this direction with a neat and easy-to-use codebase. 
 
 [0]: https://www.zju.edu.cn/english/
 [1]: https://shanzhenren.github.io/
@@ -41,6 +32,7 @@ and
 [10]: https://lianhui.ucsd.edu/
 [11]: https://allenai.org/
 [12]: https://huggingface.co/TIGER-Lab
+[13]: https://research.nvidia.com/labs/adlr/
 
 
 <!-- Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
