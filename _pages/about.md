@@ -2,22 +2,72 @@
 layout: about
 title: About
 permalink: /
-subtitle: <a href='https://uwaterloo.ca/'>University of Waterloo</a>; <a href='https://vectorinstitute.ai/'>Vector Institute</a>;
+subtitle: <a href='https://uwaterloo.ca/'>University of Waterloo</a> · Waterloo, Canada · <a href='https://vectorinstitute.ai/'>Vector Institute</a>;
 
 profile:
-  align: right
+  align: left
   image: profile.png
-  image_circular: true # crops the image to make it circular
+  image_circular: true
 
-news: true  # includes a list of news items
-latest_posts: false  # includes a list of the newest posts
-selected_papers: true # includes a list of papers marked as "selected={true}"
-social: true  # includes social icons at the bottom of the page
+hero:
+  role: Ph.D. Student in Computer Science
+  tagline: AI/NLP researcher working on LLMs, multimodal systems, evaluation, and agentic post-training.
+  focus:
+    - LLM/VLM Post-Training
+    - Multimodal Evaluation
+    - Tool Use
+    - Agentic RL
+  sections:
+    - label: About
+      url: "#bio"
+    - label: News
+      url: "#news"
+    - label: Experience
+      url: "#experience"
+    - label: Impact
+      url: "#impact"
+    - label: Publications
+      url: "#publications"
+
+announcement:
+  label: I am on the industrial job market for 2026!
+  text: Please feel free to reach out if you find my background a good fit for your organization.
+  actions:
+    - label: CV
+      url: /assets/pdf/Dongfu_CV.pdf
+
+featured_links:
+  - title: Publications
+    description: Full paper list, preprints, and bibliographic details.
+    url: /publications/
+  - title: Projects
+    description: Benchmarks, demos, open-source code, and research artifacts.
+    url: /projects/
+  - title: CV
+    description: Academic CV in PDF format.
+    url: /assets/pdf/Dongfu_CV.pdf
+  - title: Misc
+    description: Talks, services, and external blog posts.
+    url: /Misc/
+
+news: true
+latest_posts: false
+selected_papers: true
+social: false
 ---
 
-I'm a second-year CS Ph.D. student of [TIGER-Lab][12] at [University of Waterloo][7], advised by Prof. [Wenhu Chen][6]. Previously, I received my bachelor degree in Computer Science at [Zhejiang University][0]. I am currently interning at [NVIDIA ADLR]([13]) at Santa Clara. 
+I am a Ph.D. student in Computer Science at the [University of Waterloo][7]. I am affiliated with [TIGER-Lab][12] and the [Vector Institute](https://vectorinstitute.ai/), where I am advised by Prof. [Wenhu Chen][6]. I expect to graduate in **June 2026**. Before Waterloo, I received my B.E. in Computer Science from [Zhejiang University][0], where I was advised by Prof. Zhou Zhao.
 
-My research focus on LLM/VLM-post training, including alignment, evaluation, and applications. Recently I am particularly interested in reinforcement learning for reasoning tasks and how they can better use tools to solve problems. I built [VerlTool](https://github.com/TIGER-AI-Lab/verl-tool) as an initial exploration of this direction with a neat and easy-to-use codebase. 
+My recent research experience includes [NVIDIA ADLR][13] in Santa Clara, the Allen Institute for AI in Seattle, SeaAI in Singapore, and earlier collaboration with the University of Southern California. My work has been recognized with an **Outstanding Paper Award at TMLR 2025** for *Mantis* and a **Best Paper Finalist / Oral at CVPR 2024** for *MMMU*. Across these roles, I have worked on post-training, multimodal evaluation, and agentic systems, with several projects later adopted or cited by follow-up model, benchmark, and tooling efforts.
+
+My research goal is to build multimodal language agents that can reason, use tools, and collaborate with humans in open-ended settings. More broadly, I am interested in turning capable foundation models into practical systems through stronger post-training methods, better benchmarks, and reusable research infrastructure. My recent research interests include:
+
+- **Post-training and agentic RL for tool use:** [VerlTool](https://github.com/TIGER-AI-Lab/verl-tool), [AceCoder](https://tiger-ai-lab.github.io/AceCoder/), [Critique-Coder](https://tiger-ai-lab.github.io/Critique-Coder/)
+- **Multimodal evaluation and benchmarks:** [MMMU](https://mmmu-benchmark.github.io), [MEGA-Bench](https://tiger-ai-lab.github.io/MEGA-Bench/), [WildVision](https://huggingface.co/spaces/WildVision/vision-arena), [StructEval](https://tiger-ai-lab.github.io/StructEval/)
+- **Multimodal understanding and reward models:** [Mantis](https://tiger-ai-lab.github.io/Mantis/), [VideoScore](https://tiger-ai-lab.github.io/VideoScore/), [VideoScore2](https://tiger-ai-lab.github.io/VideoScore2/), [QuickVideo](https://arxiv.org/abs/2505.16175)
+- **Open-ended research and reasoning systems:** [OpenResearcher](https://huggingface.co/spaces/OpenResearcher/OpenResearcher), [Nemotron 3 Super](https://research.nvidia.com/labs/nemotron/files/NVIDIA-Nemotron-3-Super-Technical-Report.pdf), [LLM-Blender](https://aclanthology.org/2023.acl-long.792/)
+
+I am actively looking for full-time positions in industry research or engineering. Feel free to reach out by email if my background looks relevant.
 
 [0]: https://www.zju.edu.cn/english/
 [1]: https://shanzhenren.github.io/
@@ -33,10 +83,3 @@ My research focus on LLM/VLM-post training, including alignment, evaluation, and
 [11]: https://allenai.org/
 [12]: https://huggingface.co/TIGER-Lab
 [13]: https://research.nvidia.com/labs/adlr/
-
-
-<!-- Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
-
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
-
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](http://fortawesome.github.io/Font-Awesome/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them. -->

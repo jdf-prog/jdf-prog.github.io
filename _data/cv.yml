@@ -2,96 +2,126 @@
   type: map
   contents:
     - name: Full Name
-      value: Albert Einstein
-    - name: Date of Birth
-      value: 14th March 1879
+      value: Dongfu Jiang (姜东甫)
+    - name: Email
+      value: dongfu.jiang@uwaterloo.ca
     - name: Languages
-      value: English, German
+      value: Chinese (native), English (fluent)
 
 - title: Education
   type: time_table
   contents:
-    - title: PhD
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1905
+    - title: Ph.D. in Computer Science
+      institution: University of Waterloo, Waterloo, Canada
+      year: 2023 - 2026
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Federal teaching diploma
-      institution: Eidgenössische Technische Hochschule, Zurich, Switzerland
-      year: 1900
+        - Advised by Prof. Wenhu Chen, TIGER-Lab
+        - Affiliate of the Vector Institute for AI
+        - Research on LLM/VLM post-training, multimodal evaluation, and agentic RL
+    - title: B.E. in Computer Science
+      institution: Zhejiang University, Hangzhou, China
+      year: 2019 - 2023
       description:
-        - Description 1.
-        - Description 2.
+        - GPA 3.97 / 4.00
+        - Advised by Prof. Zhou Zhao
 
 - title: Experience
   type: time_table
   contents:
-    - title: Professor of Theoretical Physics
-      institution: Institute for Advanced Study, Princeton University
-      year: 1933 - 1955
+    - title: Research Intern
+      institution: NVIDIA ADLR, Santa Clara, US
+      year: Aug 2025 - Present
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Visiting Professor
-      institution: California Institute of Technology, Pasadena, California, US
-      year: 1933
+        - Agentic reinforcement learning for tool use
+        - Contributing to post-training of Nemotron family of models
+    - title: Research Intern
+      institution: Allen Institute for AI, Seattle, US
+      year: Jun 2024 - Sep 2024
       description:
-        - Description 1.
-        - Description 2.
-
-    - title: Director
-      institution: Kaiser Wilhelm Institute for Physics, Berlin, Germany.
-      year: 1917-1933
-
-    - title: Professor of Theoretical Physics
-      institution: Karl-Ferdinand University, Prague, Czechoslovakia
-      year: 1911 - 1917
+        - Active learning with verbalized human feedback
+    - title: Research Associate
+      institution: SeaAI, Singapore (remote)
+      year: Feb 2024 - Sep 2025
       description:
+        - Worked on interleaved multi-image instruction tuning for multimodal language models
+    - title: Research Intern
+      institution: University of Southern California, US (remote)
+      year: Mar 2022 - Mar 2023
+      description:
+        - Worked on methods for ensembling large language models with ranking and generation-based fusion
 
-    - title: Associate Professor of Theoretical Physics
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1909 - 1911
-
-- title: Open Source Projects
+- title: Selected Publications
   type: time_table
   contents:
-    - title: <a href="https://github.com/alshedivat/al-folio">al-folio</a>
-      year: 2015-now
-      description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
+    - title: <a href="https://github.com/TIGER-AI-Lab/verl-tool">VerlTool</a>
+      year: 2025
+      description: Holistic RL training framework for tool-using language agents.
+    - title: <a href="https://arxiv.org/abs/2405.01483">Mantis</a>
+      year: 2024
+      description: Interleaved multi-image instruction tuning for multimodal LLMs.
+    - title: <a href="https://arxiv.org/abs/2406.15252">VideoScore</a>
+      year: 2025
+      description: Automatic metrics for video generation quality via human feedback.
+    - title: <a href="https://arxiv.org/abs/2410.10441">MEGA-Bench</a>
+      year: 2025
+      description: 500+ task multimodal evaluation benchmark for VLMs.
+    - title: <a href="https://aclanthology.org/2023.acl-long.792">LLM-Blender</a>
+      year: 2023
+      description: Ensemble framework for LLMs via pairwise ranking and generative fusion. ACL 2023.
+
+- title: Selected Impact
+  type: time_table
+  contents:
+    - year: 2023 - 2026
+      maindescription: First / co-first works received broad online coverage, including <em>MarkTechPost</em> features on <em>LLM-Blender</em>, <em>GenAI-Arena</em>, <em>OpenResearcher</em>, and <em>AceCoder</em>.
+    - year: 2024 - 2026
+      maindescription: <em>MMMU</em> has been cited by major multimodal model and benchmark works including <em>Llama 3</em>, <em>LLaVA-OneVision</em>, <em>Cambrian-1</em>, <em>Kimi-VL</em>, and <em>Video-MME</em>.
+    - year: 2023 - 2026
+      maindescription: <em>LLM-Blender</em> has been cited by representative LLM systems and evaluation works including <em>FrugalGPT</em>, <em>Prometheus 2</em>, <em>RewardBench</em>, <em>SimPO</em>, and <em>Mixture-of-Agents</em>.
+    - year: 2024 - 2026
+      maindescription: <em>MANTIS</em> has been cited by multimodal follow-up works including <em>LLaVA-OneVision</em>, <em>LLaVA-NeXT-Interleave</em>, <em>Molmo / PixMo</em>, <em>InternVL3</em>, and <em>MMMU-Pro</em>.
+    - year: 2025 - 2026
+      maindescription: <em>VerlTool</em> has been cited by later agentic RL and tool-use works including <em>DeepAgent</em>, <em>SkyRL</em>, and <em>AgentFlow</em>.
+    - year: 2026
+      maindescription: <em>OpenResearcher</em>'s data has been adopted by NVIDIA's <em>Nemotron</em> family of models.
+    - year: 2025
+      maindescription: <em>AceCoder</em> synthesized prompts were used in the coding RL data mixture of OLMo 3.
+    - year: 2024 - 2026
+      maindescription: <em>WildVision</em> has been cited by follow-up multimodal evaluation and alignment works including <em>LLaVA-Critic</em>, <em>InternVL3</em>, <em>InternVL3.5</em>, and <em>Mammoth-VL</em>.
 
 - title: Honors and Awards
   type: time_table
   contents:
-    - year: 1921
-      items: 
-        - Nobel Prize in Physics 
-        - Matteucci Medal
-    - year: 2029
-      items: 
-        - Max Planck Medal
+    - year: 2025
+      items:
+        - Outstanding Paper Award, TMLR 2025, for MANTIS (1 / 1539 selected)
+        - Journal to Conference Certificate, TMLR 2025, for StructEval
+    - year: 2024
+      items:
+        - Best Paper Finalist and Oral, CVPR 2024, for MMMU (24 / 11,532 selected)
+    - year: 2022
+      items:
+        - Xiaomi Scholarship (Zhejiang University)
+    - year: 2021
+      items:
+        - Zhejiang University First-Class Scholarship (top 3%)
+    - year: 2020
+      items:
+        - National Scholarship, Zhejiang University (top 1%)
+        - Zhejiang University First-Class Scholarship (top 3%)
 
 - title: Academic Interests
   type: nested_list
   contents:
-    - title: Topic 1.
-      items: 
-        - Description 1.
-        - Description 2.
-    - title: Topic 2.
+    - title: Post-Training for LLMs and VLMs
       items:
-        - Description 1.
-        - Description 2.
-
-- title: Other Interests
-  type: list
-  contents:
-    - <u>Hobbies:</u> Hobby 1, Hobby 2, etc.
+        - Reinforcement learning from execution and environment feedback
+        - Tool use and agentic behavior
+    - title: Multimodal Evaluation
+      items:
+        - Automatic metrics for generation quality
+        - Comprehensive benchmarks for vision-language models
+    - title: Open-Ended Alignment
+      items:
+        - Preference learning beyond human feedback
+        - Scalable evaluation and reward modeling

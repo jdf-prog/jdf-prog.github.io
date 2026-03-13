@@ -3,77 +3,251 @@ layout: default
 ---
 
 <!-- about.html -->
-      <div class="post">
-        <header class="post-header">
-          <h1 class="post-title">
-            {% if site.title == "blank" -%}<span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }} {{ site.last_name }}{%- else -%}{{ site.title }}{%- endif %}
-          </h1>
-          <p class="desc">{{ page.subtitle }}</p>
-        </header>
+<div class="post about-page">
+  <header class="post-header">
+    <h1 class="post-title">
+      {% if site.title == "blank" -%}<span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }} {{ site.last_name }}{%- else -%}{{ site.title }}{%- endif %}
+    </h1>
+    <p class="desc">{{ page.subtitle }}</p>
+  </header>
 
-        <article>
-          {% if page.profile -%}
-          <div class="profile float-{%- if page.profile.align == 'left' -%}left{%- else -%}right{%- endif -%}">
-            {%- if page.profile.image %}
-              {%- assign profile_image_path = page.profile.image | prepend: 'assets/img/' -%}
+  <article class="home-shell">
+    <section class="home-hero" id="top">
+      {% if page.profile and page.profile.image %}
+        {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
+        {% if page.profile.image_circular %}
+          {% assign profile_image_class = "img-fluid home-hero__image rounded-circle" %}
+        {% else %}
+          {% assign profile_image_class = "img-fluid home-hero__image rounded" %}
+        {% endif %}
 
-              {% if page.profile.image_circular %}
-                {%- assign profile_image_class = "img-fluid z-depth-1 rounded-circle" -%}
-              {% else %}
-                {%- assign profile_image_class = "img-fluid z-depth-1 rounded" -%}
-              {% endif %}
-
-              {% include figure.html
-              path=profile_image_path
-              class=profile_image_class
-              alt=page.profile.image
-              cache_bust=true -%}
-            {% endif -%}
-            {%- if page.profile.more_info %}
+        <div class="home-hero__media">
+          {% include figure.html
+            path=profile_image_path
+            class=profile_image_class
+            alt=page.profile.image
+            cache_bust=true %}
+          {% if page.profile.more_info %}
             <div class="more-info">
               {{ page.profile.more_info }}
             </div>
-            {%- endif %}
+          {% endif %}
+        </div>
+      {% endif %}
+
+      <div class="home-hero__body">
+        {% assign last_name_parts = site.last_name | split: ' (' %}
+        {% if page.hero.role %}
+          <p class="home-hero__eyebrow">{{ page.hero.role }}</p>
+        {% endif %}
+
+        <h1 class="home-hero__title">
+          {{ site.first_name }} <span class="accent">{{ last_name_parts | first }}</span>
+          {% if site.last_name contains "(" %}
+            <span>| {{ site.last_name | split: "(" | last | remove: ")" }}</span>
+          {% endif %}
+        </h1>
+
+        {% if page.hero.tagline %}
+          <p class="home-hero__tagline">{{ page.hero.tagline }}</p>
+        {% endif %}
+
+        <p class="home-hero__subtitle">{{ page.subtitle }}</p>
+
+        <div class="home-hero__links">
+          {% if site.email %}
+            <a class="home-pill" href="mailto:{{ site.email | encode_email }}"><i class="fas fa-envelope"></i> Email</a>
+          {% endif %}
+          {% if site.scholar_userid %}
+            <a class="home-pill" href="https://scholar.google.com/citations?user={{ site.scholar_userid }}" target="_blank" rel="noopener noreferrer"><i class="ai ai-google-scholar"></i> Google Scholar</a>
+          {% endif %}
+          {% if site.github_username %}
+            <a class="home-pill" href="https://github.com/{{ site.github_username }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
+          {% endif %}
+          {% if site.twitter_username %}
+            <a class="home-pill" href="https://x.com/{{ site.twitter_username }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i> X</a>
+          {% endif %}
+          <a class="home-pill" href="{{ '/assets/pdf/Dongfu_CV.pdf' | relative_url }}" target="_blank" rel="noopener noreferrer"><i class="fas fa-file-alt"></i> CV</a>
+        </div>
+
+        {% if page.hero.focus %}
+          <ul class="home-hero__chips">
+            {% for item in page.hero.focus %}
+              <li class="home-chip">{{ item }}</li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+      </div>
+    </section>
+
+    {% if page.announcement and page.announcement.label %}
+      <section class="home-callout">
+        <div>
+          <p class="home-callout__label">{{ page.announcement.label }}</p>
+          {% if page.announcement.text %}
+            <p class="home-callout__text">{{ page.announcement.text }}</p>
+          {% endif %}
+        </div>
+
+        {% if page.announcement.actions %}
+          <div class="home-callout__actions">
+            {% for item in page.announcement.actions %}
+              <a class="home-action" href="{{ item.url | relative_url }}">{{ item.label }}</a>
+            {% endfor %}
           </div>
-          {%- endif %}
+        {% endif %}
+      </section>
+    {% endif %}
 
-          <div class="clearfix">
-            {{ content }}
+    <!-- Institution Logos Strip -->
+    <section class="home-logos">
+      <p class="home-logos__label">Research Experience at</p>
+      <div class="home-logos__row">
+        <a href="https://research.nvidia.com/labs/adlr/" target="_blank" rel="noopener noreferrer" class="home-logo-item home-logo-item--nvidia" title="NVIDIA ADLR">
+          <img src="{{ '/assets/img/Nvidia_logo.svg.png' | relative_url }}" alt="NVIDIA" loading="lazy">
+        </a>
+        <a href="https://allenai.org/" target="_blank" rel="noopener noreferrer" class="home-logo-item home-logo-item--ai2" title="Allen Institute for AI">
+          <img src="{{ '/assets/img/ai2-logo.png' | relative_url }}" alt="AI2" loading="lazy">
+        </a>
+        <a href="https://sea.com/" target="_blank" rel="noopener noreferrer" class="home-logo-item home-logo-item--sea" title="Sea AI Lab">
+          <img src="{{ '/assets/img/seaailab-logo.jpeg' | relative_url }}" alt="Sea AI Lab" loading="lazy">
+        </a>
+        <a href="https://uwaterloo.ca/" target="_blank" rel="noopener noreferrer" class="home-logo-item home-logo-item--uw" title="University of Waterloo">
+          <img src="{{ '/assets/img/University_of_Waterloo_seal.svg.png' | relative_url }}" alt="University of Waterloo" loading="lazy">
+        </a>
+        <a href="https://vectorinstitute.ai/" target="_blank" rel="noopener noreferrer" class="home-logo-item home-logo-item--vector" title="Vector Institute">
+          <img src="{{ '/assets/img/vector-logo.jpg' | relative_url }}" alt="Vector Institute" loading="lazy">
+        </a>
+        <a href="https://www.zju.edu.cn/english/" target="_blank" rel="noopener noreferrer" class="home-logo-item home-logo-item--zju" title="Zhejiang University">
+          <img src="{{ '/assets/img/zju-logo.svg.png' | relative_url }}" alt="Zhejiang University" loading="lazy">
+        </a>
+      </div>
+    </section>
+
+    <div class="home-content">
+      <section class="home-card" id="bio">
+        <div class="home-card__header">
+          <h2>About</h2>
+        </div>
+        <div class="home-richtext clearfix">
+          {{ content }}
+        </div>
+      </section>
+
+      {% if page.news and site.announcements.enabled %}
+        <section class="home-card" id="news">
+          <div class="home-card__header">
+            <h2>Recent News</h2>
+            <a href="{{ '/news/' | relative_url }}">All news</a>
           </div>
+          {% include news.html limit=true %}
+        </section>
+      {% endif %}
 
-          <!-- News -->
-          {% if page.news and site.announcements.enabled -%}
-            <h2><a href="{{ '/news/' | relative_url }}" style="color: inherit;">News</a></h2>
-            {%- include news.html limit=true %}
-          {%- endif %}
-
-          <!-- Latest posts -->
-          {% if page.latest_posts -%}
-            <h2><a href="{{ '/blog/' | relative_url }}" style="color: inherit;">latest posts</a></h2>
-            {%- include latest_posts.html %}
-          {%- endif %}
-
-          <!-- Selected papers -->
-          {% if page.selected_papers -%}
-            <h2><a href="{{ '/publications/' | relative_url }}" style="color: inherit;">Selected publications</a></h2>
-            {%- include selected_papers.html %}
-          {%- endif %}
-
-          <!-- Social -->
-          {%- if page.social %}
-            <div class="social">
-              <div class="contact-icons">
-                {% include social.html %}
+      {% assign education_entry = site.data.cv | where: "title", "Education" | first %}
+      {% assign experience_entry = site.data.cv | where: "title", "Experience" | first %}
+      {% assign impact_entry = site.data.cv | where: "title", "Selected Impact" | first %}
+      {% if education_entry or experience_entry %}
+        <section class="home-card" id="experience">
+          <div class="home-card__header">
+            <h2>Experience</h2>
+            <a href="{{ '/assets/pdf/Dongfu_CV.pdf' | relative_url }}" target="_blank" rel="noopener noreferrer">Full CV</a>
+          </div>
+          <div class="home-timeline">
+            {% if education_entry %}
+              <div class="home-timeline__group">
+                <h3>Education</h3>
+                <ul class="home-timeline__list">
+                  {% for content in education_entry.contents %}
+                    <li class="home-timeline__item">
+                      <div class="home-timeline__year">{{ content.year }}</div>
+                      <div class="home-timeline__body">
+                        <p class="home-timeline__title">{{ content.title }}</p>
+                        <p class="home-timeline__meta">{{ content.institution }}</p>
+                        {% if content.description %}
+                          <ul class="home-timeline__details">
+                            {% for item in content.description limit: 2 %}
+                              <li>{{ item }}</li>
+                            {% endfor %}
+                          </ul>
+                        {% endif %}
+                      </div>
+                    </li>
+                  {% endfor %}
+                </ul>
               </div>
+            {% endif %}
 
-              <div class="contact-note">
-                {{ site.contact_note }}
+            {% if experience_entry %}
+              <div class="home-timeline__group">
+                <h3>Research Experience</h3>
+                <ul class="home-timeline__list">
+                  {% for content in experience_entry.contents %}
+                    <li class="home-timeline__item">
+                      <div class="home-timeline__year">{{ content.year }}</div>
+                      <div class="home-timeline__body">
+                        <p class="home-timeline__title">{{ content.title }}</p>
+                        <p class="home-timeline__meta">{{ content.institution }}</p>
+                        {% if content.description %}
+                          <ul class="home-timeline__details">
+                            {% for item in content.description limit: 2 %}
+                              <li>{{ item }}</li>
+                            {% endfor %}
+                          </ul>
+                        {% endif %}
+                      </div>
+                    </li>
+                  {% endfor %}
+                </ul>
               </div>
+            {% endif %}
+          </div>
+        </section>
+      {% endif %}
 
-            </div>
-          {%- endif %}
+      {% if impact_entry %}
+        <section class="home-card" id="impact">
+          <div class="home-card__header">
+            <h2>Impact</h2>
+            <a href="{{ '/assets/pdf/Dongfu_CV.pdf' | relative_url }}" target="_blank" rel="noopener noreferrer">Full CV</a>
+          </div>
+          <div class="home-timeline">
+            <ul class="home-timeline__list">
+              {% for content in impact_entry.contents %}
+                <li class="home-timeline__item">
+                  <div class="home-timeline__year">{{ content.year }}</div>
+                  <div class="home-timeline__body">
+                    {% if content.maindescription %}
+                      <p class="home-timeline__summary">{{ content.maindescription }}</p>
+                    {% elsif content.description %}
+                      <ul class="home-timeline__details">
+                        {% for item in content.description %}
+                          <li>{{ item }}</li>
+                        {% endfor %}
+                      </ul>
+                    {% endif %}
+                  </div>
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </section>
+      {% endif %}
 
-          <script type='text/javascript' id='mapmyvisitors' src='https://mapmyvisitors.com/map.js?cl=ffffff&w=400&t=tt&d=7lzq8sLPzOUvP96iW0WI2UKllt1RdOK1GGjCR5_F3eg'></script>
-        </article>
+    </div>
 
+    {% if page.selected_papers %}
+      <section class="home-card" id="publications">
+        <div class="home-card__header">
+          <h2>Publications</h2>
+          <a href="{{ '/publications/' | relative_url }}">Full list</a>
+        </div>
+        <div class="publications">
+          {% bibliography -f {{ site.scholar.bibliography }} %}
+        </div>
+      </section>
+    {% endif %}
+
+    <script type='text/javascript' id='mapmyvisitors' src='https://mapmyvisitors.com/map.js?cl=ffffff&w=400&t=tt&d=7lzq8sLPzOUvP96iW0WI2UKllt1RdOK1GGjCR5_F3eg'></script>
+  </article>
 </div>

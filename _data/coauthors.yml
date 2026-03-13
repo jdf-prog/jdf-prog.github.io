@@ -1,34 +1,31 @@
-"Adams":
-  - firstname: ["Edwin", "E.", "E. P.", "Edwin Plimpton"]
-    url: https://en.wikipedia.org/wiki/Edwin_Plimpton_Adams
+# Coauthors configuration for jdf-prog.github.io
+# Names here will be linked on the publications page.
+# Format: "LastName": [{firstname: [...], url: "..."}]
 
-"Podolsky":
-  - firstname: ["Boris", "B.", "B. Y.", "Boris Yakovlevich"]
-    url: https://en.wikipedia.org/wiki/Boris_Podolsky
+"Chen":
+  - firstname: ["Wenhu", "W."]
+    url: https://wenhuchen.github.io/
 
-"Rosen":
-  - firstname: ["Nathan", "N."]
-    url: https://en.wikipedia.org/wiki/Nathan_Rosen
+"Yue":
+  - firstname: ["Xiang", "X."]
+    url: https://xiangyue9607.github.io/
 
-"Bach": 
-  - firstname: ["Johann Sebastian", "J. S."]
-    url: https://en.wikipedia.org/wiki/Johann_Sebastian_Bach
+"Lin":
+  - firstname: ["Bill Yuchen", "B. Y.", "Bill Y.", "Yuchen"]
+    url: https://yuchenlin.xyz/
 
-  - firstname: ["Carl Philipp Emanuel", "C. P. E."]
-    url: https://en.wikipedia.org/wiki/Carl_Philipp_Emanuel_Bach
+"Choi":
+  - firstname: ["Yejin", "Y."]
+    url: https://homes.cs.washington.edu/~yejin/
 
-"Przibram":
-  - firstname: ["Karl"]
-    url: https://link.springer.com/article/10.1007/s00016-019-00242-z
+"Liu":
+  - firstname: ["Qian", "Q."]
+    url: https://siviltaram.github.io/
 
-"Schrödinger":
-  - firstname: ["Erwin"]
-    url: https://en.wikipedia.org/wiki/Erwin_Schr%C3%B6dinger
+"Pang":
+  - firstname: ["Tianyu", "T."]
+    url: https://p2333.github.io/
 
-"Lorentz":
-  - firstname: ["Hendrik Antoon"]
-    url: https://en.wikipedia.org/wiki/Hendrik_Lorentz
-
-"Planck":
-  - firstname: ["Max"]
-    url: https://en.wikipedia.org/wiki/Max_Planck
+"Du":
+  - firstname: ["Chao", "C."]
+    url: https://duchao0726.github.io/
