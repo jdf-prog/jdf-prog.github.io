@@ -61,8 +61,14 @@ layout: default
           {% if site.scholar_userid %}
             <a class="home-pill" href="https://scholar.google.com/citations?user={{ site.scholar_userid }}" target="_blank" rel="noopener noreferrer"><i class="ai ai-google-scholar"></i> Google Scholar</a>
           {% endif %}
+          {% if site.semanticscholar_id %}
+            <a class="home-pill" href="https://www.semanticscholar.org/author/{{ site.semanticscholar_id }}" target="_blank" rel="noopener noreferrer"><i class="ai ai-semantic-scholar"></i> Semantic Scholar</a>
+          {% endif %}
           {% if site.github_username %}
             <a class="home-pill" href="https://github.com/{{ site.github_username }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
+          {% endif %}
+          {% if site.linkedin_username %}
+            <a class="home-pill" href="https://www.linkedin.com/in/{{ site.linkedin_username }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i> LinkedIn</a>
           {% endif %}
           {% if site.twitter_username %}
             <a class="home-pill" href="https://x.com/{{ site.twitter_username }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i> X</a>
@@ -147,6 +153,25 @@ layout: default
       {% assign education_entry = site.data.cv | where: "title", "Education" | first %}
       {% assign experience_entry = site.data.cv | where: "title", "Experience" | first %}
       {% assign impact_entry = site.data.cv | where: "title", "Selected Impact" | first %}
+      {% if page.selected_papers %}
+        <section class="home-card" id="publications">
+          <div class="home-card__header home-card__header--publications">
+            <h2>
+              Publications
+              <span class="home-card__header-note">(*, + indicate equal contribution)</span>
+            </h2>
+            {% if site.scholar_userid %}
+              <a href="https://scholar.google.com/citations?user={{ site.scholar_userid }}" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+            {% else %}
+              <a href="{{ '/publications/' | relative_url }}">Full list</a>
+            {% endif %}
+          </div>
+          <div class="publications">
+            {% bibliography -f {{ site.scholar.bibliography }} %}
+          </div>
+        </section>
+      {% endif %}
+
       {% if education_entry or experience_entry %}
         <section class="home-card" id="experience">
           <div class="home-card__header">
@@ -235,18 +260,6 @@ layout: default
       {% endif %}
 
     </div>
-
-    {% if page.selected_papers %}
-      <section class="home-card" id="publications">
-        <div class="home-card__header">
-          <h2>Publications</h2>
-          <a href="{{ '/publications/' | relative_url }}">Full list</a>
-        </div>
-        <div class="publications">
-          {% bibliography -f {{ site.scholar.bibliography }} %}
-        </div>
-      </section>
-    {% endif %}
 
     <script type='text/javascript' id='mapmyvisitors' src='https://mapmyvisitors.com/map.js?cl=ffffff&w=400&t=tt&d=7lzq8sLPzOUvP96iW0WI2UKllt1RdOK1GGjCR5_F3eg'></script>
   </article>

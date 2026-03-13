@@ -290,6 +290,13 @@
     font-weight: 800;
   }
 
+  .home-card__header-note {
+    color: var(--home-primary);
+    font-size: 0.72em;
+    font-weight: 700;
+    white-space: normal;
+  }
+
   .home-card__header a {
     color: var(--home-primary);
     font-size: 0.85rem;
@@ -702,6 +709,11 @@
       flex-direction: column;
       align-items: flex-start;
       padding: 0.9rem 1rem;
+    }
+
+    .home-callout > div:first-child {
+      flex: initial;
+      width: 100%;
     }
 
     .home-card {

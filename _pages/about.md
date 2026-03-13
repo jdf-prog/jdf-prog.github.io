@@ -22,12 +22,12 @@ hero:
       url: "#bio"
     - label: News
       url: "#news"
+    - label: Publications
+      url: "#publications"
     - label: Experience
       url: "#experience"
     - label: Impact
       url: "#impact"
-    - label: Publications
-      url: "#publications"
 
 announcement:
   label: I am on the industrial job market for 2026!
