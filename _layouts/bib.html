@@ -3,12 +3,12 @@
 <!-- _layouts/bib.html -->
 {% assign has_preview = entry.preview and entry.preview != blank %}
 {% assign title_link = nil %}
-{% if entry.arxiv %}
+{% if entry.url %}
+  {% assign title_link = entry.url %}
+{% elsif entry.arxiv %}
   {% assign title_link = 'https://arxiv.org/abs/' | append: entry.arxiv %}
 {% elsif entry.website %}
   {% assign title_link = entry.website %}
-{% elsif entry.url %}
-  {% assign title_link = entry.url %}
 {% elsif entry.pdf %}
   {% if entry.pdf contains '://' %}
     {% assign title_link = entry.pdf %}
@@ -19,6 +19,8 @@
 
 {% assign venue_url = nil %}
 {% assign venue_style = nil %}
+{% assign topic_values = entry.topics | default: "" | downcase | replace: " | ", "|" | replace: "| ", "|" | replace: " |", "|" %}
+{% assign topic_labels = entry.topics | default: "" | split: "|" %}
 {% if site.data.venues[entry.abbr] %}
   {% assign venue_url = site.data.venues[entry.abbr].url %}
   {% if site.data.venues[entry.abbr].color != blank %}
@@ -26,14 +28,26 @@
   {% endif %}
 {% endif %}
 
-<div class="row publication-row">
+<div class="row publication-row" data-topics="{{ topic_values }}">
   <div id="{{entry.key}}" class="{% if has_preview %}col-lg-10 col-md-9{% else %}col-12{% endif %} publication-body">
-    {% if entry.abbr %}
+    {% if entry.abbr or topic_values != "" %}
       <div class="publication-topline">
-        {% if venue_url %}
-          <a class="publication-venue" href="{{ venue_url }}" {% if venue_style %}style="{{ venue_style }}"{% endif %}>{{ entry.abbr }}</a>
-        {% else %}
-          <span class="publication-venue" {% if venue_style %}style="{{ venue_style }}"{% endif %}>{{ entry.abbr }}</span>
+        {% if entry.abbr %}
+          {% if venue_url %}
+            <a class="publication-venue" href="{{ venue_url }}" {% if venue_style %}style="{{ venue_style }}"{% endif %}>{{ entry.abbr }}</a>
+          {% else %}
+            <span class="publication-venue" {% if venue_style %}style="{{ venue_style }}"{% endif %}>{{ entry.abbr }}</span>
+          {% endif %}
+        {% endif %}
+        {% if topic_values != "" %}
+          <div class="publication-topics" aria-label="Publication topics">
+            {% for topic_label in topic_labels %}
+              {% assign topic_name = topic_label | strip %}
+              {% if topic_name != "" %}
+                <button class="publication-topic-chip" type="button" data-topic="{{ topic_name | downcase }}">{{ topic_name }}</button>
+              {% endif %}
+            {% endfor %}
+          </div>
         {% endif %}
       </div>
     {% endif %}

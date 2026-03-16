@@ -7,7 +7,10 @@ nav: true
 nav_order: 1
 ---
 <!-- _pages/publications.md -->
-<div class="publications">
+<div class="publications" data-publication-filters>
+  <div class="publication-filters" role="toolbar" aria-label="Publication topic filters"></div>
+
+  <p class="publication-filter-empty" hidden>No publications match this topic yet.</p>
 
 {% bibliography -f {{ site.scholar.bibliography }} %}
 

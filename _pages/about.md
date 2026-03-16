@@ -11,12 +11,11 @@ profile:
 
 hero:
   role: Ph.D. Student in Computer Science
-  tagline: AI/NLP researcher working on LLMs, multimodal systems, evaluation, and agentic post-training.
+  tagline: AI/NLP researcher working on LLM/VLM post-training, multimodal evaluation, and agentic tool-use systems.
   focus:
     - LLM/VLM Post-Training
-    - Multimodal Evaluation
-    - Tool Use
-    - Agentic RL
+    - Evaluation & Benchmarks
+    - Agentic Systems
   sections:
     - label: About
       url: "#bio"
@@ -30,7 +29,7 @@ hero:
       url: "#impact"
 
 announcement:
-  label: I am on the industrial job market for 2026!
+  label: I am on the job market for 2026!
   text: Please feel free to reach out if you find my background a good fit for your organization.
   actions:
     - label: CV
@@ -58,14 +57,13 @@ social: false
 
 I am a Ph.D. student in Computer Science at the [University of Waterloo][7]. I am affiliated with [TIGER-Lab][12] and the [Vector Institute](https://vectorinstitute.ai/), where I am advised by Prof. [Wenhu Chen][6]. I expect to graduate in **June 2026**. Before Waterloo, I received my B.E. in Computer Science from [Zhejiang University][0], where I was advised by Prof. Zhou Zhao.
 
-My recent research experience includes [NVIDIA ADLR][13] in Santa Clara, the Allen Institute for AI in Seattle, SeaAI in Singapore, and earlier collaboration with the University of Southern California. My work has been recognized with an **Outstanding Paper Award at TMLR 2025** for *Mantis* and a **Best Paper Finalist / Oral at CVPR 2024** for *MMMU*. Across these roles, I have worked on post-training, multimodal evaluation, and agentic systems, with several projects later adopted or cited by follow-up model, benchmark, and tooling efforts.
+My recent research experience includes [NVIDIA ADLR][13] in Santa Clara, the Allen Institute for AI in Seattle, SeaAI in Singapore, and earlier collaboration with the University of Southern California. My work has been recognized with an **Outstanding Paper Award at TMLR 2025** for *Mantis* and a **Best Paper Finalist / Oral at CVPR 2024** for *MMMU*. Across these roles, I have worked on post-training, evaluation, and agentic systems, with several projects later adopted or cited by follow-up model, benchmark, and tooling efforts.
 
 My research goal is to build multimodal language agents that can reason, use tools, and collaborate with humans in open-ended settings. More broadly, I am interested in turning capable foundation models into practical systems through stronger post-training methods, better benchmarks, and reusable research infrastructure. My recent research interests include:
 
-- **Post-training and agentic RL for tool use:** [VerlTool](https://github.com/TIGER-AI-Lab/verl-tool), [AceCoder](https://tiger-ai-lab.github.io/AceCoder/), [Critique-Coder](https://tiger-ai-lab.github.io/Critique-Coder/)
-- **Multimodal evaluation and benchmarks:** [MMMU](https://mmmu-benchmark.github.io), [MEGA-Bench](https://tiger-ai-lab.github.io/MEGA-Bench/), [WildVision](https://huggingface.co/spaces/WildVision/vision-arena), [StructEval](https://tiger-ai-lab.github.io/StructEval/)
-- **Multimodal understanding and reward models:** [Mantis](https://tiger-ai-lab.github.io/Mantis/), [VideoScore](https://tiger-ai-lab.github.io/VideoScore/), [VideoScore2](https://tiger-ai-lab.github.io/VideoScore2/), [QuickVideo](https://arxiv.org/abs/2505.16175)
-- **Open-ended research and reasoning systems:** [OpenResearcher](https://huggingface.co/spaces/OpenResearcher/OpenResearcher), [Nemotron 3 Super](https://research.nvidia.com/labs/nemotron/files/NVIDIA-Nemotron-3-Super-Technical-Report.pdf), [LLM-Blender](https://aclanthology.org/2023.acl-long.792/)
+- **Evaluation and benchmarks:** [MMMU](https://mmmu-benchmark.github.io), [VIEScore](https://tiger-ai-lab.github.io/VIEScore/), [WildVision](https://huggingface.co/spaces/WildVision/vision-arena), [GenAI Arena](https://huggingface.co/spaces/TIGER-Lab/GenAI-Arena), [MEGA-Bench](https://tiger-ai-lab.github.io/MEGA-Bench/), [TIGERScore](https://tiger-ai-lab.github.io/TIGERScore/), [StructEval](https://tiger-ai-lab.github.io/StructEval/)
+- **LLM/VLM post-training:** [Nemotron 3 Super](https://research.nvidia.com/labs/nemotron/files/NVIDIA-Nemotron-3-Super-Technical-Report.pdf), [Mantis](https://tiger-ai-lab.github.io/Mantis/), [AceCoder](https://tiger-ai-lab.github.io/AceCoder/), [General-Reasoner](https://tiger-ai-lab.github.io/General-Reasoner/), [Critique-Coder](https://tiger-ai-lab.github.io/Critique-Coder/)
+- **Agentic Systems:** [VerlTool](https://github.com/TIGER-AI-Lab/verltool), [OpenResearcher](https://huggingface.co/spaces/OpenResearcher/OpenResearcher), [Nemotron 3 Super](https://research.nvidia.com/labs/nemotron/files/NVIDIA-Nemotron-3-Super-Technical-Report.pdf), [LLM-Blender](https://yuchenlin.xyz/LLM-Blender/)
 
 I am actively looking for full-time positions in industry research or engineering. Feel free to reach out by email if my background looks relevant.
 
