@@ -25,7 +25,12 @@ layout: default
           {% include figure.html
             path=profile_image_path
             class=profile_image_class
-            alt=page.profile.image
+            alt="Portrait of Dongfu Jiang"
+            width="631"
+            height="591"
+            loading="eager"
+            decoding="async"
+            fetchpriority="high"
             cache_bust=true %}
           {% if page.profile.more_info %}
             <div class="more-info">
@@ -133,7 +138,7 @@ layout: default
     <div class="home-content">
       <section class="home-card" id="bio">
         <div class="home-card__header">
-          <h2>About</h2>
+          <h2 data-section-kicker="01">About</h2>
         </div>
         <div class="home-richtext clearfix">
           {{ content }}
@@ -143,7 +148,7 @@ layout: default
       {% if page.news and site.announcements.enabled %}
         <section class="home-card" id="news">
           <div class="home-card__header">
-            <h2>Recent News</h2>
+            <h2 data-section-kicker="02">Recent News</h2>
             <a href="{{ '/news/' | relative_url }}">All news</a>
           </div>
           {% include news.html limit=true %}
@@ -156,7 +161,7 @@ layout: default
       {% if page.selected_papers %}
         <section class="home-card" id="publications">
           <div class="home-card__header home-card__header--publications">
-            <h2>
+            <h2 data-section-kicker="03">
               Publications
               <span class="home-card__header-note">(*, + indicate equal contribution)</span>
             </h2>
@@ -178,7 +183,7 @@ layout: default
       {% if education_entry or experience_entry %}
         <section class="home-card" id="experience">
           <div class="home-card__header">
-            <h2>Experience</h2>
+            <h2 data-section-kicker="04">Experience</h2>
             <a href="{{ '/assets/pdf/Dongfu_CV.pdf' | relative_url }}" target="_blank" rel="noopener noreferrer">Full CV</a>
           </div>
           <div class="home-timeline">
@@ -190,14 +195,25 @@ layout: default
                     <li class="home-timeline__item">
                       <div class="home-timeline__year">{{ content.year }}</div>
                       <div class="home-timeline__body">
-                        <p class="home-timeline__title">{{ content.title }}</p>
-                        <p class="home-timeline__meta">{{ content.institution }}</p>
-                        {% if content.description %}
-                          <ul class="home-timeline__details">
-                            {% for item in content.description limit: 2 %}
-                              <li>{{ item }}</li>
-                            {% endfor %}
-                          </ul>
+                        <div class="home-timeline__content">
+                          <p class="home-timeline__title">{{ content.title }}</p>
+                          <p class="home-timeline__meta">{{ content.institution }}</p>
+                          {% if content.description %}
+                            <ul class="home-timeline__details">
+                              {% for item in content.description limit: 2 %}
+                                <li>{{ item }}</li>
+                              {% endfor %}
+                            </ul>
+                          {% endif %}
+                        </div>
+                        {% capture institution_logo %}
+                          {% include institution_logo.html institution=content.institution %}
+                        {% endcapture %}
+                        {% assign institution_logo = institution_logo | strip %}
+                        {% if institution_logo != "" %}
+                          <div class="home-timeline__logo">
+                            {{ institution_logo }}
+                          </div>
                         {% endif %}
                       </div>
                     </li>
@@ -214,14 +230,25 @@ layout: default
                     <li class="home-timeline__item">
                       <div class="home-timeline__year">{{ content.year }}</div>
                       <div class="home-timeline__body">
-                        <p class="home-timeline__title">{{ content.title }}</p>
-                        <p class="home-timeline__meta">{{ content.institution }}</p>
-                        {% if content.description %}
-                          <ul class="home-timeline__details">
-                            {% for item in content.description limit: 2 %}
-                              <li>{{ item }}</li>
-                            {% endfor %}
-                          </ul>
+                        <div class="home-timeline__content">
+                          <p class="home-timeline__title">{{ content.title }}</p>
+                          <p class="home-timeline__meta">{{ content.institution }}</p>
+                          {% if content.description %}
+                            <ul class="home-timeline__details">
+                              {% for item in content.description limit: 2 %}
+                                <li>{{ item }}</li>
+                              {% endfor %}
+                            </ul>
+                          {% endif %}
+                        </div>
+                        {% capture institution_logo %}
+                          {% include institution_logo.html institution=content.institution %}
+                        {% endcapture %}
+                        {% assign institution_logo = institution_logo | strip %}
+                        {% if institution_logo != "" %}
+                          <div class="home-timeline__logo">
+                            {{ institution_logo }}
+                          </div>
                         {% endif %}
                       </div>
                     </li>
@@ -264,6 +291,5 @@ layout: default
 
     </div>
 
-    <script type='text/javascript' id='mapmyvisitors' src='https://mapmyvisitors.com/map.js?cl=ffffff&w=400&t=tt&d=7lzq8sLPzOUvP96iW0WI2UKllt1RdOK1GGjCR5_F3eg'></script>
   </article>
 </div>

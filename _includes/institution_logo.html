@@ -1,0 +1,45 @@
+{%- assign institution_name = include.institution | default: "" -%}
+{%- assign logo_src = "" -%}
+{%- assign logo_alt = "" -%}
+{%- assign logo_class = "" -%}
+{%- assign logo_url = "" -%}
+
+{%- if institution_name contains "NVIDIA" -%}
+  {%- assign logo_src = "/assets/img/Nvidia_logo.svg.png" -%}
+  {%- assign logo_alt = "NVIDIA" -%}
+  {%- assign logo_class = "home-logo-item--nvidia" -%}
+  {%- assign logo_url = "https://research.nvidia.com/labs/adlr/" -%}
+{%- elsif institution_name contains "Allen Institute for AI" -%}
+  {%- assign logo_src = "/assets/img/ai2-logo.png" -%}
+  {%- assign logo_alt = "Allen Institute for AI" -%}
+  {%- assign logo_class = "home-logo-item--ai2" -%}
+  {%- assign logo_url = "https://allenai.org/" -%}
+{%- elsif institution_name contains "SeaAI" -%}
+  {%- assign logo_src = "/assets/img/seaailab-logo.jpeg" -%}
+  {%- assign logo_alt = "Sea AI Lab" -%}
+  {%- assign logo_class = "home-logo-item--sea" -%}
+  {%- assign logo_url = "https://sea.com/" -%}
+{%- elsif institution_name contains "University of Waterloo" -%}
+  {%- assign logo_src = "/assets/img/University_of_Waterloo_seal.svg.png" -%}
+  {%- assign logo_alt = "University of Waterloo" -%}
+  {%- assign logo_class = "home-logo-item--uw" -%}
+  {%- assign logo_url = "https://uwaterloo.ca/" -%}
+{%- elsif institution_name contains "Zhejiang University" -%}
+  {%- assign logo_src = "/assets/img/zju-logo.svg.png" -%}
+  {%- assign logo_alt = "Zhejiang University" -%}
+  {%- assign logo_class = "home-logo-item--zju" -%}
+  {%- assign logo_url = "https://www.zju.edu.cn/english/" -%}
+{%- endif -%}
+
+{%- if logo_src != "" -%}
+  <a
+    href="{{ logo_url }}"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="home-logo-item home-logo-item--timeline {{ logo_class }}"
+    title="{{ logo_alt }}"
+    aria-label="{{ logo_alt }}"
+  >
+    <img src="{{ logo_src | relative_url }}" alt="{{ logo_alt }}" loading="lazy">
+  </a>
+{%- endif -%}

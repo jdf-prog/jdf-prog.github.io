@@ -49,23 +49,33 @@
 {%- endif -%}
 
 {%- if site.serve_og_meta %}
+    {%- assign social_title = title -%}
+    {%- if page.url != "/" and page.title and page.title != "blank" -%}
+        {%- assign social_title = page.title | append: " | " | append: title -%}
+    {%- endif -%}
+    {%- assign social_image = page.og_image | default: site.og_image -%}
+    {%- if social_image and social_image contains '://' -%}
+        {%- assign social_image_url = social_image -%}
+    {%- elsif social_image -%}
+        {%- assign social_image_url = social_image | absolute_url -%}
+    {%- endif -%}
     <!-- OpenGraph -->
     <meta property="og:site_name" content="{{ title }}" />
     <meta property="og:type" content="{%- if is_blog_post -%}article{%- else -%}website{%- endif -%}" />
-    <meta property="og:title" content="{%- if page.title -%}{{ title }} | {{ page.title }}{%- else -%}{{ title }}{%- endif -%}" />
+    <meta property="og:title" content="{{ social_title }}" />
     <meta property="og:url" content="{{ page.url | prepend: site.baseurl | prepend: site.url | remove_first: 'index.html' }}" />
     <meta property="og:description" content="{%- if page.description -%}{{ page.description }}{%- else -%}{{ site.description }}{%- endif -%}" />
-    {% if page.og_image or site.og_image -%}
-    <meta property="og:image" content="{%- if page.og_image -%}{{ page.og_image }}{%- else -%}{{ site.og_image }}{%- endif -%}" />
+    {% if social_image_url -%}
+    <meta property="og:image" content="{{ social_image_url }}" />
     {%- endif %}
     <meta property="og:locale" content="{{ site.lang }}" />
 
     <!-- Twitter card -->
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="{%- if page.title -%}{{ page.title }}{%- else -%}{{ title }}{%- endif -%}" />
+    <meta name="twitter:title" content="{{ social_title }}" />
     <meta name="twitter:description" content="{%- if page.description -%}{{ page.description }}{%- else -%}{{ site.description }}{%- endif -%}" />
-    {% if page.og_image or site.og_image -%}
-    <meta name="twitter:image" content="{%- if page.og_image -%}{{ page.og_image }}{%- else -%}{{ site.og_image }}{%- endif -%}" />
+    {% if social_image_url -%}
+    <meta name="twitter:image" content="{{ social_image_url }}" />
     {%- endif %}
     {% if site.twitter_username -%}
     <meta name="twitter:site" content="@{{ site.twitter_username }}" />

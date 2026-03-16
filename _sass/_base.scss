@@ -186,10 +186,38 @@ blockquote {
   opacity: 0.95;
 }
 
+.navbar.navbar-light .navbar-nav {
+  position: relative;
+}
+
+.navbar-current-indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(
+    90deg,
+    color-mix(in srgb, var(--global-theme-color) 78%, #0ea5e9),
+    var(--global-theme-color)
+  );
+  box-shadow: 0 6px 16px color-mix(in srgb, var(--global-theme-color) 18%, transparent);
+  opacity: 0;
+  transform: translate3d(0, 0, 0);
+  transition:
+    transform 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+    width 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.18s ease;
+  pointer-events: none;
+  z-index: 0;
+}
+
 // Section-link underline slide effect
 .navbar.navbar-light .navbar-nav .nav-item .nav-link {
   position: relative;
   padding-bottom: 3px;
+  transition: color 0.2s ease;
 
   &::after {
     content: '';
@@ -202,16 +230,35 @@ blockquote {
     border-radius: 1px;
     transform: scaleX(0);
     transform-origin: center;
-    transition: transform 0.2s ease;
+    transition: transform 0.2s ease, opacity 0.2s ease;
   }
 
   &:hover::after {
     transform: scaleX(1);
   }
+
+  &:focus-visible {
+    outline: none;
+    color: var(--global-theme-color);
+
+    &::after {
+      transform: scaleX(1);
+    }
+  }
+}
+
+.navbar.navbar-light .navbar-nav .nav-item .nav-link.is-current::after {
+  transform: scaleX(1);
 }
 
 .navbar.navbar-light .navbar-nav .nav-item.active > .nav-link::after {
   transform: scaleX(1);
+}
+
+.navbar.navbar-light .navbar-nav.has-current-indicator .nav-item .nav-link.is-current::after,
+.navbar.navbar-light .navbar-nav.has-current-indicator .nav-item.active > .nav-link::after {
+  opacity: 0;
+  transform: scaleX(0);
 }
 
 // Section links: slightly smaller, muted until hover
@@ -222,11 +269,19 @@ blockquote {
   &:hover {
     color: var(--global-theme-color);
   }
+
+  &.is-current {
+    color: var(--global-theme-color);
+  }
 }
 
 // Home link: slightly bolder
 .navbar.navbar-light .navbar-nav .nav-home-link {
   font-weight: 600;
+
+  &.is-current {
+    color: var(--global-theme-color);
+  }
 }
 
 // Separator between Home and sections
@@ -330,6 +385,11 @@ blockquote {
     transition: all 0.2s;
   }
 
+  &:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 0.2rem color-mix(in srgb, var(--global-theme-color) 18%, transparent);
+  }
+
   .top-bar {
     transform: rotate(45deg);
     transform-origin: 10% 10%;
@@ -359,6 +419,65 @@ blockquote {
   }
 }
 
+@media (max-width: 991.98px) {
+  .navbar.navbar-light .navbar-nav {
+    width: 100%;
+  }
+
+  .navbar-current-indicator {
+    display: none;
+  }
+
+  .navbar .navbar-collapse {
+    margin-top: 0.8rem;
+    padding: 0.7rem;
+    border: 1px solid color-mix(in srgb, var(--global-theme-color) 12%, var(--global-divider-color));
+    border-radius: 1rem;
+    background:
+      linear-gradient(
+        180deg,
+        color-mix(in srgb, var(--global-bg-color) 92%, white 8%),
+        color-mix(in srgb, var(--global-bg-color) 98%, var(--global-theme-color) 2%)
+      );
+    box-shadow: 0 16px 34px rgba(19, 41, 76, 0.08);
+    backdrop-filter: blur(14px);
+  }
+
+  .navbar.navbar-light .navbar-nav .nav-item {
+    width: 100%;
+  }
+
+  .navbar.navbar-light .navbar-nav .nav-item .nav-link {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 0.72rem 0.85rem 0.8rem;
+    border-radius: 0.85rem;
+
+    &::after {
+      left: 0.85rem;
+      right: auto;
+      width: calc(100% - 1.7rem);
+    }
+  }
+
+  .navbar.navbar-light .navbar-nav .nav-item .nav-link.is-current,
+  .navbar.navbar-light .navbar-nav .nav-item.active > .nav-link {
+    background: color-mix(in srgb, var(--global-theme-color) 7%, var(--global-bg-color));
+  }
+
+  .nav-sep-item {
+    display: none;
+  }
+
+  .toggle-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0.35rem 0.2rem 0.05rem;
+  }
+}
+
 #light-toggle {
   padding: 0;
   border: 0;
@@ -367,6 +486,12 @@ blockquote {
 
   &:hover {
     color: var(--global-hover-color);
+  }
+
+  &:focus-visible {
+    outline: none;
+    border-radius: 999px;
+    box-shadow: 0 0 0 0.18rem color-mix(in srgb, var(--global-theme-color) 16%, transparent);
   }
 }
 
@@ -655,8 +780,47 @@ footer.sticky-bottom {
   .publication-filters {
     display: flex;
     flex-wrap: wrap;
+    align-items: flex-start;
     gap: 0.55rem;
     margin-bottom: 1.2rem;
+    padding: 0.4rem;
+    border: 1px solid color-mix(in srgb, var(--global-theme-color) 10%, var(--global-divider-color));
+    border-radius: 1rem;
+    position: relative;
+    isolation: isolate;
+    background:
+      linear-gradient(
+        180deg,
+        color-mix(in srgb, var(--global-theme-color) 3%, var(--global-bg-color)),
+        color-mix(in srgb, var(--global-theme-color) 1%, var(--global-bg-color))
+      );
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7);
+  }
+
+  .publication-filter-indicator {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-radius: 999px;
+    background: linear-gradient(
+      135deg,
+      color-mix(in srgb, var(--global-theme-color) 92%, #0ea5e9) 0%,
+      var(--global-theme-color) 100%
+    );
+    box-shadow:
+      0 10px 22px color-mix(in srgb, var(--global-theme-color) 18%, transparent),
+      inset 0 1px 0 color-mix(in srgb, white 22%, transparent);
+    opacity: 0;
+    transform: translate3d(0, 0, 0);
+    transition:
+      transform 0.32s cubic-bezier(0.22, 1, 0.36, 1),
+      width 0.32s cubic-bezier(0.22, 1, 0.36, 1),
+      height 0.32s cubic-bezier(0.22, 1, 0.36, 1),
+      opacity 0.18s ease;
+    pointer-events: none;
+    z-index: 0;
   }
 
   .publication-filter {
@@ -669,20 +833,40 @@ footer.sticky-bottom {
     font-size: 0.84rem;
     font-weight: 600;
     line-height: 1.2;
-    transition: background 0.18s ease, border-color 0.18s ease, color 0.18s ease, transform 0.18s ease;
+    box-shadow: 0 2px 6px rgba(15, 23, 42, 0.03);
+    position: relative;
+    z-index: 1;
+    transition: background 0.18s ease, border-color 0.18s ease, color 0.18s ease, transform 0.18s ease, box-shadow 0.18s ease;
 
     &:hover {
       border-color: color-mix(in srgb, var(--global-theme-color) 42%, var(--global-divider-color));
       color: var(--global-theme-color);
       transform: translateY(-1px);
+      box-shadow: 0 8px 16px rgba(15, 23, 42, 0.06);
+    }
+
+    &:focus-visible {
+      outline: none;
+      border-color: color-mix(in srgb, var(--global-theme-color) 88%, #0ea5e9);
+      box-shadow:
+        0 0 0 0.18rem color-mix(in srgb, var(--global-theme-color) 16%, transparent),
+        0 8px 16px rgba(15, 23, 42, 0.06);
     }
 
     &.is-active {
-      border-color: var(--global-theme-color);
-      background: var(--global-theme-color);
+      border-color: color-mix(in srgb, var(--global-theme-color) 88%, #0ea5e9);
+      background: linear-gradient(135deg, color-mix(in srgb, var(--global-theme-color) 92%, #0ea5e9) 0%, var(--global-theme-color) 100%);
       color: var(--global-bg-color);
-      box-shadow: 0 10px 22px color-mix(in srgb, var(--global-theme-color) 18%, transparent);
+      box-shadow:
+        0 10px 22px color-mix(in srgb, var(--global-theme-color) 18%, transparent),
+        inset 0 1px 0 color-mix(in srgb, white 22%, transparent);
     }
+  }
+
+  .publication-filters.has-filter-indicator .publication-filter.is-active {
+    border-color: transparent;
+    background: transparent;
+    box-shadow: none;
   }
 
   .publication-filter-empty {
@@ -1127,6 +1311,13 @@ footer.sticky-bottom {
   }
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .navbar-current-indicator,
+  .publications .publication-filter-indicator {
+    transition: none;
+  }
+}
+
 // Rouge Color Customization
 figure.highlight {
   margin: 0 0 1rem;
@@ -1156,11 +1347,31 @@ code {
 
 
 // Transitioning Themes
-html.transition,
-html.transition *,
-html.transition *:before,
-html.transition *:after {
-  transition: all 750ms !important;
+html.transition body,
+html.transition .navbar,
+html.transition .navbar .navbar-collapse,
+html.transition .site-footer,
+html.transition .site-footer__icon,
+html.transition .site-footer__top,
+html.transition .site-footer__top-label,
+html.transition .about-page::before,
+html.transition .about-page .home-hero,
+html.transition .about-page .home-callout,
+html.transition .about-page .home-card,
+html.transition .about-page .home-logos,
+html.transition .about-page .home-pill,
+html.transition .about-page .home-action,
+html.transition .about-page .home-link-item,
+html.transition .about-page .publication-row,
+html.transition .about-page .publication-topic-chip,
+html.transition .about-page .publication-filter,
+html.transition .about-page .publication-filter-indicator,
+html.transition .about-page .home-card__header h2,
+html.transition .about-page .home-card__header h2::before,
+html.transition .about-page .home-card__header h2::after {
+  transition-property: background-color, border-color, color, box-shadow !important;
+  transition-duration: 180ms !important;
+  transition-timing-function: ease-out !important;
   transition-delay: 0 !important;
 }
 
@@ -1205,11 +1416,11 @@ progress {
   position: fixed;
   left: 0;
   top: 56px;
-  z-index: 10;
+  z-index: 12;
 
   /* Dimensions */
   width: 100%;
-  height: 1px;
+  height: 3px;
 
   /* Reset the appearance */
   -webkit-appearance: none;
@@ -1218,41 +1429,89 @@ progress {
 
   /* Get rid of the default border in Firefox/Opera. */
   border: none;
+  overflow: hidden;
 
   /* Progress bar container for Firefox/IE10  */
-  background-color: transparent;
+  background-color: rgba(23, 59, 109, 0.08);
 
   /* Progress bar value for IE10  */
   color: var(--global-theme-color);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
 }
 
 progress::-webkit-progress-bar {
-  background-color: transparent;
+  background-color: rgba(23, 59, 109, 0.08);
 }
 
 progress::-webkit-progress-value {
-  background-color: var(--global-theme-color);
+  background: linear-gradient(90deg, #0ea5e9 0%, var(--global-theme-color) 60%, #f0642b 100%);
+  border-radius: 0 999px 999px 0;
+  box-shadow: 0 0 14px rgba(14, 165, 233, 0.22);
 }
 
 progress::-moz-progress-bar {
-  background-color: var(--global-theme-color);
+  background: linear-gradient(90deg, #0ea5e9 0%, var(--global-theme-color) 60%, #f0642b 100%);
+  border-radius: 0 999px 999px 0;
+  box-shadow: 0 0 14px rgba(14, 165, 233, 0.22);
 }
 
 .progress-container {
   width: 100%;
-  background-color: transparent;
+  background-color: rgba(23, 59, 109, 0.08);
   position: fixed;
   top: 56px;
   left: 0;
-  height: 5px;
+  height: 3px;
   display: block;
+  z-index: 11;
 }
 
 .progress-bar {
-  background-color: var(--global-theme-color);
+  background: linear-gradient(90deg, #0ea5e9 0%, var(--global-theme-color) 60%, #f0642b 100%);
   width: 0%;
   display: block;
   height: inherit;
+  box-shadow: 0 0 14px rgba(14, 165, 233, 0.22);
+}
+
+html[data-theme='dark'] {
+  @media (max-width: 991.98px) {
+    .navbar .navbar-collapse {
+      border-color: rgba(125, 211, 252, 0.14);
+      background:
+        linear-gradient(
+          180deg,
+          rgba(15, 23, 42, 0.96),
+          rgba(18, 24, 34, 0.92)
+        );
+      box-shadow: 0 18px 36px rgba(8, 14, 20, 0.28);
+    }
+
+    .navbar.navbar-light .navbar-nav .nav-item .nav-link.is-current,
+    .navbar.navbar-light .navbar-nav .nav-item.active > .nav-link {
+      background: rgba(56, 189, 248, 0.1);
+    }
+  }
+
+  progress {
+    background-color: rgba(125, 211, 252, 0.08);
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.03);
+  }
+
+  progress::-webkit-progress-bar {
+    background-color: rgba(125, 211, 252, 0.08);
+  }
+
+  .progress-container {
+    background-color: rgba(125, 211, 252, 0.08);
+  }
+
+  progress::-webkit-progress-value,
+  progress::-moz-progress-bar,
+  .progress-bar {
+    background: linear-gradient(90deg, #38bdf8 0%, #7dd3fc 55%, #fb7185 100%);
+    box-shadow: 0 0 16px rgba(56, 189, 248, 0.24);
+  }
 }
 
 /* Copy button */

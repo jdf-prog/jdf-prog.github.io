@@ -1,25 +1,54 @@
-    {% if site.footer_fixed %}
-    <footer class="fixed-bottom">
-      <div class="container mt-0">
-        &copy; Copyright {{ site.time | date: '%Y' }} {{ site.first_name }} {{ site.middle_name }} {{ site.last_name }}. {{ site.footer_text }}
-        {%- if site.impressum_path -%}
-        <a href="{{ site.url }}{{ site.baseurl }}{{ site.impressum_path }}">Impressum</a>.
-        {%- endif -%}
-        {%- if site.last_updated -%}
-        Last updated: {{ "now" | date: '%B %d, %Y' }}.
-        {%- endif %}
-      </div>
-    </footer>
-    {%- else -%}
-    <footer class="sticky-bottom mt-5">
+    <footer class="site-footer mt-5">
       <div class="container">
-        &copy; Copyright {{ site.time | date: '%Y' }} {{ site.first_name }} {{ site.middle_name }} {{ site.last_name }}. {{ site.footer_text }}
-        {%- if site.impressum_path -%}
-        <a href="{{ site.url }}{{ site.baseurl }}{{ site.impressum_path }}">Impressum</a>.
-        {%- endif -%}
-        {%- if site.last_updated -%}
-        Last updated: {{ "now" | date: '%B %d, %Y' }}.
-        {%- endif %}
+        <div class="site-footer__inner">
+          <div class="site-footer__section site-footer__section--identity">
+            <a class="site-footer__title" href="{{ '/' | relative_url }}">About {{ site.first_name }} {{ site.last_name | split: ' (' | first }}</a>
+            <p class="site-footer__meta">{{ site.first_name }} {{ site.middle_name }} {{ site.last_name }}</p>
+            {% if site.email %}
+              <a class="site-footer__email" href="mailto:{{ site.email | encode_email }}">{{ site.email }}</a>
+            {% endif %}
+          </div>
+
+          <div class="site-footer__main">
+            <div class="site-footer__section site-footer__section--social">
+              {% if site.email %}
+                <a class="site-footer__icon" href="mailto:{{ site.email | encode_email }}" aria-label="Email" title="Email"><i class="fas fa-envelope"></i></a>
+              {% endif %}
+              {% if site.scholar_userid %}
+                <a class="site-footer__icon" href="https://scholar.google.com/citations?user={{ site.scholar_userid }}" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar" title="Google Scholar"><i class="ai ai-google-scholar"></i></a>
+              {% endif %}
+              {% if site.github_username %}
+                <a class="site-footer__icon" href="https://github.com/{{ site.github_username }}" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub"><i class="fab fa-github"></i></a>
+              {% endif %}
+              {% if site.linkedin_username %}
+                <a class="site-footer__icon" href="https://www.linkedin.com/in/{{ site.linkedin_username }}" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+              {% endif %}
+              {% if site.twitter_username %}
+                <a class="site-footer__icon" href="https://x.com/{{ site.twitter_username }}" target="_blank" rel="noopener noreferrer" aria-label="X" title="X"><span class="site-footer__icon-label">X</span></a>
+              {% endif %}
+            </div>
+
+            <div class="site-footer__section site-footer__section--description">
+              <p class="site-footer__description">
+                This is an academic website for {{ site.first_name }} {{ site.last_name | split: ' (' | first }} to share research, publications, projects, and updates.
+              </p>
+              {% if site.last_updated %}
+                <p class="site-footer__updated">Last updated: {{ "now" | date: '%B %d, %Y' }}</p>
+              {% endif %}
+            </div>
+          </div>
+
+          <div class="site-footer__aside">
+            <div class="site-footer__section site-footer__section--visitors">
+              <script type="text/javascript" id="mapmyvisitors" src="https://mapmyvisitors.com/map.js?cl=ffffff&w=220&t=tt&d=7lzq8sLPzOUvP96iW0WI2UKllt1RdOK1GGjCR5_F3eg"></script>
+            </div>
+
+            <div class="site-footer__section site-footer__section--top">
+              <a class="site-footer__top" href="#top">
+                <span class="site-footer__top-label">Top</span>
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </footer>
-    {%- endif %}

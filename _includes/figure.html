@@ -1,4 +1,10 @@
 {%- assign img_path = include.path | remove: ".jpg" | remove: ".jpeg" | remove: ".png" | remove: ".tiff" -%}
+{%- assign image_styles = "" -%}
+{%- if include.min-width %}{%- assign image_styles = image_styles | append: "min-width:" | append: include.min-width | append: ";" -%}{%- endif -%}
+{%- if include.min-height %}{%- assign image_styles = image_styles | append: "min-height:" | append: include.min-height | append: ";" -%}{%- endif -%}
+{%- if include.max-width %}{%- assign image_styles = image_styles | append: "max-width:" | append: include.max-width | append: ";" -%}{%- endif -%}
+{%- if include.max-height %}{%- assign image_styles = image_styles | append: "max-height:" | append: include.max-height | append: ";" -%}{%- endif -%}
+{%- if include.style %}{%- assign image_styles = image_styles | append: include.style -%}{%- endif -%}
 
 <figure>
 
@@ -17,16 +23,16 @@
     <img
       src="{% if include.cache_bust %}{{ include.path | relative_url | bust_file_cache }}{% else %}{{ include.path | relative_url }}{% endif %}"
       {% if include.class %}class="{{ include.class }}"{% endif %}
-      {% if include.width %}width="{{ include.width }}"{% else %}width="auto"{% endif %}
-      {% if include.height %}height="{{ include.height }}"{% else %}height="auto"{% endif %}
-      {% if include.min-width %}min-width="{{ include.min-width }}"{% endif %}
-      {% if include.min-height %}min-height="{{ include.min-height }}"{% endif %}
-      {% if include.max-width %}max-width="{{ include.max-width }}"{% endif %}
-      {% if include.max-height %}max-height="{{ include.max-height }}"{% endif %}
+      {% if include.width %}width="{{ include.width }}"{% endif %}
+      {% if include.height %}height="{{ include.height }}"{% endif %}
+      {% if image_styles != "" %}style="{{ image_styles }}"{% endif %}
       {% if include.alt %}alt="{{ include.alt }}"{% endif %}
       {% if include.title %}title="{{ include.title }}"{% endif %}
+      loading="{% if include.loading %}{{ include.loading }}{% else %}lazy{% endif %}"
+      decoding="{% if include.decoding %}{{ include.decoding }}{% else %}async{% endif %}"
+      {% if include.fetchpriority %}fetchpriority="{{ include.fetchpriority }}"{% endif %}
       {% if include.zoomable %}data-zoomable{% endif %}
-      onerror="this.onerror=null; $('.responsive-img-srcset').remove();"
+      onerror="this.onerror=null; this.closest('picture') && this.closest('picture').querySelectorAll('.responsive-img-srcset').forEach(function(source) { source.remove(); });"
     />
   </picture>
 
