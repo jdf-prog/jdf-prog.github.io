@@ -278,6 +278,7 @@ $(document).ready(function() {
 
   if (homeRevealTargets.length > 0 && 'IntersectionObserver' in window) {
     document.body.classList.add('home-reveal-enabled');
+    const isCompactViewport = window.matchMedia('(max-width: 767.98px)').matches;
 
     homeRevealTargets.forEach(function(target, index) {
       target.classList.add('home-reveal');
@@ -294,11 +295,16 @@ $(document).ready(function() {
         observer.unobserve(entry.target);
       });
     }, {
-      threshold: 0.16,
-      rootMargin: '0px 0px -10% 0px',
+      threshold: isCompactViewport ? 0.02 : 0.12,
+      rootMargin: isCompactViewport ? '0px 0px -4% 0px' : '0px 0px -10% 0px',
     });
 
     homeRevealTargets.forEach(function(target) {
+      if (isCompactViewport && target.offsetHeight > window.innerHeight * 1.15) {
+        target.classList.add('is-visible');
+        return;
+      }
+
       revealObserver.observe(target);
     });
   }
