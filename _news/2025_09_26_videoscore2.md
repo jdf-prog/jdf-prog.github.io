@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Released [VideoScore2](https://tiger-ai-lab.github.io/VideoScore2/), a reasoning-aware evaluator for generative video evaluation.
+🎬 Released [VideoScore2](https://tiger-ai-lab.github.io/VideoScore2/), a multi-dimensional and interpretable evaluator for generative videos with detailed reasoning traces.

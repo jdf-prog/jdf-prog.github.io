@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-[Critique-Coder](https://tiger-ai-lab.github.io/Critique-Coder/) was accepted to ICLR 2026.
+🎉 [Critique-Coder](https://tiger-ai-lab.github.io/Critique-Coder/) was accepted to **ICLR 2026**.

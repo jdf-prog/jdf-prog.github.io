@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Released [General-Reasoner](https://arxiv.org/abs/2505.14652) to improve general reasoning beyond math and code.
+🚀 Released [General-Reasoner](https://arxiv.org/abs/2505.14652), extending RL-style reasoning beyond math and code with verified web-scale data and a generative answer verifier.

@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-[QuickVideo](https://github.com/TIGER-AI-Lab/QuickVideo) was accepted to TMLR.
+🎉 [QuickVideo](https://github.com/TIGER-AI-Lab/QuickVideo) was accepted to **TMLR**.

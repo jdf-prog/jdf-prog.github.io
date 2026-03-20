@@ -1,28 +1,64 @@
-          <div class="news">
+          {% assign is_home_news = include.home or include.limit %}
+          <div class="news {% if is_home_news %}news--home{% else %}news--archive{% endif %}">
             {% if site.news != blank -%}
             {%- assign news_size = site.news | size -%}
-            <div class="table-responsive news-scroll-wrap">
-              <table class="table table-sm table-borderless">
-              {%- assign news = site.news | reverse -%}
-              {% if include.limit and site.announcements.limit %}
+            {%- assign news = site.news | reverse -%}
+            {% if include.limit and site.announcements.limit %}
               {% assign news_limit = site.announcements.limit %}
-              {% else %}
+            {% else %}
               {% assign news_limit = news_size %}
-              {% endif %}
-              {% for item in news limit: news_limit %}
-                <tr>
-                  <th scope="row">{{ item.date | date: "%b %-d, %Y" }}</th>
-                  <td>
-                    {% if item.inline -%}
-                      {{ item.content | remove: '<p>' | remove: '</p>' | emojify }}
-                    {%- else -%}
-                      <a class="news-title" href="{{ item.url | relative_url }}">{{ item.title }}</a>
-                    {%- endif %}
-                  </td>
-                </tr>
-              {%- endfor %}
-              </table>
-            </div>
+            {% endif %}
+
+            {% if is_home_news %}
+              <div class="news-scroll-wrap {% if site.announcements.scrollable %}news-scroll-wrap--capped{% endif %}">
+                <div class="news-list">
+                  {% for item in news limit: news_limit %}
+                    <article class="news-item">
+                      <div class="news-item__date" aria-label="{{ item.date | date: '%b %-d, %Y' }}">
+                        <span class="news-item__date-text">{{ item.date | date: "%b %-d, %Y" }}</span>
+                      </div>
+                      <div class="news-item__body">
+                        {% if item.inline -%}
+                          {% assign news_content = item.content | remove: '<p>' | remove: '</p>' | replace: 'src="assets/', 'src="/assets/' %}
+                          {{ news_content | emojify }}
+                        {%- else -%}
+                          <a class="news-title" href="{{ item.url | relative_url }}">{{ item.title }}</a>
+                        {%- endif %}
+                      </div>
+                    </article>
+                  {%- endfor %}
+                </div>
+              </div>
+            {% else %}
+              {% assign news_by_year = news | group_by_exp: "item", "item.date | date: '%Y'" %}
+              <div class="news-archive-groups">
+                {% for year_group in news_by_year %}
+                  <section class="news-year-group" aria-labelledby="news-year-{{ year_group.name }}">
+                    <div class="news-year-group__header">
+                      <h2 class="news-year-group__title" id="news-year-{{ year_group.name }}">{{ year_group.name }}</h2>
+                      <span class="news-year-group__count">{{ year_group.items | size }} updates</span>
+                    </div>
+                    <div class="news-list">
+                      {% for item in year_group.items %}
+                        <article class="news-item">
+                          <div class="news-item__date" aria-label="{{ item.date | date: '%b %-d, %Y' }}">
+                            <span class="news-item__date-text">{{ item.date | date: "%b %-d" }}</span>
+                          </div>
+                          <div class="news-item__body">
+                            {% if item.inline -%}
+                              {% assign news_content = item.content | remove: '<p>' | remove: '</p>' | replace: 'src="assets/', 'src="/assets/' %}
+                              {{ news_content | emojify }}
+                            {%- else -%}
+                              <a class="news-title" href="{{ item.url | relative_url }}">{{ item.title }}</a>
+                            {%- endif %}
+                          </div>
+                        </article>
+                      {%- endfor %}
+                    </div>
+                  </section>
+                {% endfor %}
+              </div>
+            {% endif %}
           {%- else -%}
             <p>No news so far...</p>
           {%- endif %}
