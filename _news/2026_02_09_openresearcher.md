@@ -1,0 +1,8 @@
+---
+layout: post
+date: 2026-02-09 08:11:00-0800
+inline: true
+related_posts: false
+---
+
+Released [OpenResearcher](https://github.com/TIGER-AI-Lab/OpenResearcher), a fully open pipeline for long-horizon deep research trajectory synthesis.

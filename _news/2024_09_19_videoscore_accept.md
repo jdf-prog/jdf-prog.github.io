@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-🎉 VideoScore is accepted to the [EMNLP 2024](https://2024.emnlp.org/) main conference!
+[VideoScore](https://tiger-ai-lab.github.io/VideoScore/) was accepted to EMNLP 2024.

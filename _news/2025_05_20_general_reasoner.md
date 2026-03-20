@@ -5,5 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Release [General-Reasoner](https://arxiv.org/abs/2505.14652) to elicit general reasoning ability beyond math!
-
+Released [General-Reasoner](https://arxiv.org/abs/2505.14652) to improve general reasoning beyond math and code.

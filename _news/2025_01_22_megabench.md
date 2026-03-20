@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-🎉 [MegaBench](https://tiger-ai-lab.github.io/MEGA-Bench/) is accepted to [ICLR 2025](https://openreview.net/forum?id=2rWbKbmOuM)!
+[MEGA-Bench](https://tiger-ai-lab.github.io/MEGA-Bench/) was accepted to [ICLR 2025](https://openreview.net/forum?id=2rWbKbmOuM).

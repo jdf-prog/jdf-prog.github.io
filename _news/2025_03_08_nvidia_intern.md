@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-🎉 Will join NVIDIA as an intern this summer! See you at Santa Clara.
+Will join NVIDIA as a research intern in Santa Clara this summer.
