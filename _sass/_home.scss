@@ -1284,18 +1284,18 @@
       transform: scale(1);
     }
 
-    .home-hero:hover .home-hero__image,
-    .home-hero:focus-within .home-hero__image {
+    .home-hero__image-swap:hover .home-hero__image,
+    .home-hero__image-swap:focus-within .home-hero__image {
       box-shadow: 0 10px 26px rgba(17, 39, 80, 0.16);
     }
 
-    .home-hero:hover .home-hero__image-swap:not(.home-hero__image-swap--hover-unavailable) .home-hero__image--default,
-    .home-hero:focus-within .home-hero__image-swap:not(.home-hero__image-swap--hover-unavailable) .home-hero__image--default {
+    .home-hero__image-swap:hover:not(.home-hero__image-swap--hover-unavailable) .home-hero__image--default,
+    .home-hero__image-swap:focus-within:not(.home-hero__image-swap--hover-unavailable) .home-hero__image--default {
       opacity: 0;
     }
 
-    .home-hero:hover .home-hero__image-swap:not(.home-hero__image-swap--hover-unavailable) .home-hero__image--hover,
-    .home-hero:focus-within .home-hero__image-swap:not(.home-hero__image-swap--hover-unavailable) .home-hero__image--hover {
+    .home-hero__image-swap:hover:not(.home-hero__image-swap--hover-unavailable) .home-hero__image--hover,
+    .home-hero__image-swap:focus-within:not(.home-hero__image-swap--hover-unavailable) .home-hero__image--hover {
       opacity: 1;
     }
 
