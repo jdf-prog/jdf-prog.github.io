@@ -15,23 +15,45 @@ layout: default
     <section class="home-hero" id="top">
       {% if page.profile and page.profile.image %}
         {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
+        {% assign profile_hover_image_path = 'assets/img/dongfu_life_photo.heic' %}
+        {% assign profile_hover_fallback_image_path = 'assets/img/dongfu_life_photo.jpg' %}
         {% if page.profile.image_circular %}
-          {% assign profile_image_class = "img-fluid home-hero__image rounded-circle" %}
+          {% assign profile_swap_class = "home-hero__image-swap rounded-circle" %}
+          {% assign profile_image_class = "img-fluid home-hero__image home-hero__image--default rounded-circle" %}
+          {% assign profile_hover_image_class = "img-fluid home-hero__image home-hero__image--hover rounded-circle" %}
         {% else %}
-          {% assign profile_image_class = "img-fluid home-hero__image rounded" %}
+          {% assign profile_swap_class = "home-hero__image-swap rounded" %}
+          {% assign profile_image_class = "img-fluid home-hero__image home-hero__image--default rounded" %}
+          {% assign profile_hover_image_class = "img-fluid home-hero__image home-hero__image--hover rounded" %}
         {% endif %}
 
         <div class="home-hero__media">
-          {% include figure.html
-            path=profile_image_path
-            class=profile_image_class
-            alt="Portrait of Dongfu Jiang"
-            width="631"
-            height="591"
-            loading="eager"
-            decoding="async"
-            fetchpriority="high"
-            cache_bust=true %}
+          <div class="{{ profile_swap_class }}">
+            <img
+              src="{{ profile_image_path | relative_url | bust_file_cache }}"
+              class="{{ profile_image_class }}"
+              alt="Portrait of Dongfu Jiang"
+              width="631"
+              height="591"
+              loading="eager"
+              decoding="async"
+              fetchpriority="high"
+            />
+            <picture class="home-hero__image-frame home-hero__image-frame--hover" aria-hidden="true">
+              <source srcset="{{ profile_hover_image_path | relative_url }}" type="image/heic" />
+              <img
+                src="{{ profile_hover_fallback_image_path | relative_url | bust_file_cache }}"
+                class="{{ profile_hover_image_class }}"
+                alt=""
+                width="4032"
+                height="3024"
+                loading="eager"
+                decoding="async"
+                fetchpriority="low"
+                onerror="this.style.display='none'; this.closest('.home-hero__image-swap') && this.closest('.home-hero__image-swap').classList.add('home-hero__image-swap--hover-unavailable');"
+              />
+            </picture>
+          </div>
           {% if page.profile.more_info %}
             <div class="more-info">
               {{ page.profile.more_info }}
