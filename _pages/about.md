@@ -27,6 +27,8 @@ hero:
       url: "#experience"
     - label: Impact
       url: "#impact"
+    - label: Miscellaneous
+      url: "#miscellaneous"
 
 announcement:
   label: I am on the job market for 2026!
@@ -53,6 +55,43 @@ news: true
 latest_posts: false
 selected_papers: true
 social: false
+
+mentoring:
+  - name: Yishan Li
+    url: https://scholar.google.com/citations?user=5PfpWbAAAAAJ&hl=en
+    detail: "B.S.: THU -> OpenBMB"
+  - name: Xuan He
+    url: https://scholar.google.com/citations?user=G0_RcM4AAAAJ&hl=en
+    detail: "B.S.: THU -> UIUC PhD"
+  - name: Wyett Zeng
+    url: https://seas.harvard.edu/person/wyett-zeng
+    detail: "B.S.: UWaterloo -> Harvard M.S."
+  - name: Jialin Yang
+    url: https://scholar.google.com/citations?user=oxululUAAAAJ&hl=en
+    detail: "B.S.: UWaterloo -> Dartmouth PhD"
+  - name: Zhuofeng Li
+    url: https://zhuofeng-li.github.io/
+    detail: TAMU PhD
+  - name: Yuxuan Zhang
+    url: https://www.cs.ubc.ca/~reacher/
+    detail: UBC PhD
+  - name: Yi Lu
+    url: https://eigentom.github.io/
+    detail: "M.S.: UofT"
+  - name: Chi Ruan
+    url: https://scholar.google.com/citations?user=cMVAjpEAAAAJ&hl=en
+    detail: "B.S.: Ottawa"
+  - name: Shenzhe Zhu
+    url: https://shenzhezhu.github.io/
+    detail: "B.S.: UofT"
+
+academic_service:
+  - ACL ARR (2024, 2025)
+  - NeurIPS (2024, 2025)
+  - ICLR (2024)
+  - TMLR (2024, 2025)
+  - AISTATS (2025)
+  - AAAI (2025)
 ---
 
 I am a Ph.D. student in Computer Science at the [University of Waterloo][7]. I am affiliated with [TIGER-Lab][12] and the [Vector Institute](https://vectorinstitute.ai/), where I am advised by Prof. [Wenhu Chen][6]. I expect to graduate in **June 2026**. Before Waterloo, I received my B.E. in Computer Science from [Zhejiang University][0], where I was advised by Prof. Zhou Zhao.

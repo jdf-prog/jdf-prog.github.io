@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-📝 Released [ReviewGrounder](https://arxiv.org/abs/2604.14261), a rubric-guided, tool-integrated agent framework for improving the substantiveness of LLM-generated peer reviews, together with the [code](https://github.com/EigenTom/ReviewGrounder).
+📝 [ReviewGrounder](https://arxiv.org/abs/2604.14261) was accepted to the **ACL 2026 Main Conference**, with a rubric-guided, tool-integrated framework for improving the substantiveness of LLM-generated peer reviews. The [code](https://github.com/EigenTom/ReviewGrounder) is also available.

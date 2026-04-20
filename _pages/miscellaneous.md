@@ -2,11 +2,10 @@
 layout: page
 permalink: /Misc/
 title: Miscellaneous
-description: talks, services, etc.
+description: talks, mentoring, and academic service.
 nav: true
 nav_order: 3
 ---
-
 
 ## Talks
 
@@ -21,8 +20,23 @@ nav_order: 3
 
 ---
 
-## Services
-**I have served as a reviewer for the following conferences**
+## Students I Mentored / Worked With
+
+- [Yishan Li](https://scholar.google.com/citations?user=5PfpWbAAAAAJ&hl=en) (B.S.: THU) -> OpenBMB
+- [Xuan He](https://scholar.google.com/citations?user=G0_RcM4AAAAJ&hl=en) (B.S.: THU) -> UIUC PhD
+- [Wyett Zeng](https://seas.harvard.edu/person/wyett-zeng) (B.S.: UWaterloo) -> Harvard M.S.
+- [Jialin Yang](https://scholar.google.com/citations?user=oxululUAAAAJ&hl=en) (B.S.: UWaterloo) -> Dartmouth PhD
+- [Zhuofeng Li](https://zhuofeng-li.github.io/) (TAMU PhD)
+- [Yuxuan Zhang](https://www.cs.ubc.ca/~reacher/) (UBC PhD)
+- [Yi Lu](https://eigentom.github.io/) (M.S.: UofT)
+- [Chi Ruan](https://scholar.google.com/citations?user=cMVAjpEAAAAJ&hl=en) (B.S.: Ottawa)
+- [Shenzhe Zhu](https://shenzhezhu.github.io/) (B.S.: UofT)
+
+---
+
+## Academic Service
+
+I have served as a reviewer for the following venues:
 
 - ACL ARR (2024, 2025)
 - NeurIPS (2024, 2025)
@@ -30,7 +44,3 @@ nav_order: 3
 - TMLR (2024, 2025)
 - AISTATS (2025)
 - AAAI (2025)
-
-<!-- For now, this page is assumed to be a static description of your courses. You can convert it to a collection similar to `_projects/` so that you can have a dedicated page for each course.
-
-Organize your courses by years, topics, or universities, however you like! -->

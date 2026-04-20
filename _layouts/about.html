@@ -311,6 +311,35 @@ layout: default
         </section>
       {% endif %}
 
+      {% if page.mentoring or page.academic_service %}
+        <section class="home-card" id="miscellaneous">
+          <div class="home-card__header">
+            <h2>Miscellaneous</h2>
+            <a href="{{ '/Misc/' | relative_url }}">More</a>
+          </div>
+          <div class="home-richtext">
+            {% if page.mentoring %}
+              <h3>Students I Mentored / Worked With</h3>
+              <ul>
+                {% for person in page.mentoring %}
+                  <li><a href="{{ person.url }}" target="_blank" rel="noopener noreferrer">{{ person.name }}</a> ({{ person.detail }})</li>
+                {% endfor %}
+              </ul>
+            {% endif %}
+
+            {% if page.academic_service %}
+              <h3>Academic Service</h3>
+              <p>I have served as a reviewer for the following venues:</p>
+              <ul>
+                {% for venue in page.academic_service %}
+                  <li>{{ venue }}</li>
+                {% endfor %}
+              </ul>
+            {% endif %}
+          </div>
+        </section>
+      {% endif %}
+
     </div>
 
   </article>
