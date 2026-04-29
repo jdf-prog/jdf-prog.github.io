@@ -39,6 +39,9 @@
             <span class="publication-venue" {% if venue_style %}style="{{ venue_style }}"{% endif %}>{{ entry.abbr }}</span>
           {% endif %}
         {% endif %}
+        {% if entry.selected == "true" or entry.selected == true %}
+          <span class="publication-selected-badge">Selected</span>
+        {% endif %}
         {% if topic_values != "" %}
           <div class="publication-topics" aria-label="Publication topics">
             {% for topic_label in topic_labels %}

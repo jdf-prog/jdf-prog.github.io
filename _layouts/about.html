@@ -197,7 +197,7 @@ layout: default
             <div class="publication-filters" role="toolbar" aria-label="Publication topic filters"></div>
 
             <p class="publication-filter-empty" hidden>No publications match this topic yet.</p>
-            {% bibliography -f {{ site.scholar.bibliography }} %}
+            {% bibliography -f {{ site.scholar.bibliography }} -q @*[selected=true]* %}
           </div>
         </section>
       {% endif %}
