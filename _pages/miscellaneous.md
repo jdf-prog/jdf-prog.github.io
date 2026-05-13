@@ -40,6 +40,7 @@ I have served as a reviewer for the following venues:
 
 - ACL ARR (2024, 2025)
 - NeurIPS (2024, 2025)
+- ICML (2026, Silver Reviewer)
 - ICLR (2024)
 - TMLR (2024, 2025)
 - AISTATS (2025)

@@ -88,6 +88,7 @@ mentoring:
 academic_service:
   - ACL ARR (2024, 2025)
   - NeurIPS (2024, 2025)
+  - ICML (2026, Silver Reviewer)
   - ICLR (2024)
   - TMLR (2024, 2025)
   - AISTATS (2025)
@@ -100,9 +101,9 @@ My recent research experience includes [NVIDIA ADLR][13] in Santa Clara, the All
 
 My research goal is to build multimodal language agents that can reason, use tools, and collaborate with humans in open-ended settings. More broadly, I am interested in turning capable foundation models into practical systems through stronger post-training methods, better benchmarks, and reusable research infrastructure. My recent research interests include:
 
-- **Evaluation and benchmarks:** [MMMU](https://mmmu-benchmark.github.io), [VIEScore](https://tiger-ai-lab.github.io/VIEScore/), [WildVision](https://huggingface.co/spaces/WildVision/vision-arena), [GenAI Arena](https://huggingface.co/spaces/TIGER-Lab/GenAI-Arena), [MEGA-Bench](https://tiger-ai-lab.github.io/MEGA-Bench/), [TIGERScore](https://tiger-ai-lab.github.io/TIGERScore/), [StructEval](https://tiger-ai-lab.github.io/StructEval/)
-- **LLM/VLM post-training:** [Nemotron 3 Super](https://research.nvidia.com/labs/nemotron/files/NVIDIA-Nemotron-3-Super-Technical-Report.pdf), [Mantis](https://tiger-ai-lab.github.io/Mantis/), [AceCoder](https://tiger-ai-lab.github.io/AceCoder/), [General-Reasoner](https://tiger-ai-lab.github.io/General-Reasoner/), [Critique-Coder](https://tiger-ai-lab.github.io/Critique-Coder/)
-- **Agentic Systems:** [VerlTool](https://github.com/TIGER-AI-Lab/verltool), [OpenResearcher](https://huggingface.co/spaces/OpenResearcher/OpenResearcher), [Nemotron 3 Super](https://research.nvidia.com/labs/nemotron/files/NVIDIA-Nemotron-3-Super-Technical-Report.pdf), [LLM-Blender](https://yuchenlin.xyz/LLM-Blender/)
+- **Evaluation and benchmarks:** [MMMU](https://mmmu-benchmark.github.io), [VIEScore](https://tiger-ai-lab.github.io/VIEScore/), [WildVision](https://huggingface.co/spaces/WildVision/vision-arena), [GenAI Arena](https://huggingface.co/spaces/TIGER-Lab/GenAI-Arena), [MEGA-Bench](https://tiger-ai-lab.github.io/MEGA-Bench/), [ClawBench](https://claw-bench.com), [FABSCORE](https://github.com/chchenhui/fabscore), [TIGERScore](https://tiger-ai-lab.github.io/TIGERScore/), [StructEval](https://tiger-ai-lab.github.io/StructEval/)
+- **LLM/VLM post-training:** [Nemotron 3 Super](https://research.nvidia.com/labs/nemotron/files/NVIDIA-Nemotron-3-Super-Technical-Report.pdf), [Nemotron-Cascade 2](https://huggingface.co/collections/nvidia/nemotron-cascade-2), [Mantis](https://tiger-ai-lab.github.io/Mantis/), [AceCoder](https://tiger-ai-lab.github.io/AceCoder/), [General-Reasoner](https://tiger-ai-lab.github.io/General-Reasoner/), [Critique-Coder](https://tiger-ai-lab.github.io/Critique-Coder/)
+- **Agentic Systems:** [DCI-Agent](https://arxiv.org/abs/2605.05242), [AutoLab](https://autolab.moe/), [VerlTool](https://github.com/TIGER-AI-Lab/verltool), [OpenResearcher](https://huggingface.co/spaces/OpenResearcher/OpenResearcher), [Nemotron 3 Super](https://research.nvidia.com/labs/nemotron/files/NVIDIA-Nemotron-3-Super-Technical-Report.pdf), [LLM-Blender](https://yuchenlin.xyz/LLM-Blender/)
 
 I am actively looking for full-time positions in industry research or engineering. Feel free to reach out by email if my background looks relevant.
 
