@@ -781,11 +781,11 @@ footer.sticky-bottom {
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
-    gap: 0.55rem;
-    margin-bottom: 1.2rem;
-    padding: 0.4rem;
+    gap: 0.32rem;
+    margin-bottom: 0.72rem;
+    padding: 0.28rem;
     border: 1px solid color-mix(in srgb, var(--global-theme-color) 10%, var(--global-divider-color));
-    border-radius: 1rem;
+    border-radius: 0.75rem;
     position: relative;
     isolation: isolate;
     background:
@@ -829,11 +829,11 @@ footer.sticky-bottom {
     background: color-mix(in srgb, var(--global-theme-color) 5%, var(--global-bg-color));
     color: var(--global-text-color);
     border-radius: 999px;
-    padding: 0.42rem 0.92rem;
-    font-size: 0.84rem;
+    padding: 0.25rem 0.62rem;
+    font-size: 0.72rem;
     font-weight: 600;
     line-height: 1.2;
-    box-shadow: 0 2px 6px rgba(15, 23, 42, 0.03);
+    box-shadow: 0 1px 4px rgba(15, 23, 42, 0.025);
     position: relative;
     z-index: 1;
     transition: background 0.18s ease, border-color 0.18s ease, color 0.18s ease, transform 0.18s ease, box-shadow 0.18s ease;
@@ -841,8 +841,8 @@ footer.sticky-bottom {
     &:hover {
       border-color: color-mix(in srgb, var(--global-theme-color) 42%, var(--global-divider-color));
       color: var(--global-theme-color);
-      transform: translateY(-1px);
-      box-shadow: 0 8px 16px rgba(15, 23, 42, 0.06);
+      transform: translateY(-0.5px);
+      box-shadow: 0 5px 10px rgba(15, 23, 42, 0.05);
     }
 
     &:focus-visible {
@@ -850,7 +850,7 @@ footer.sticky-bottom {
       border-color: color-mix(in srgb, var(--global-theme-color) 88%, #0ea5e9);
       box-shadow:
         0 0 0 0.18rem color-mix(in srgb, var(--global-theme-color) 16%, transparent),
-        0 8px 16px rgba(15, 23, 42, 0.06);
+        0 5px 10px rgba(15, 23, 42, 0.05);
     }
 
     &.is-active {
@@ -858,7 +858,7 @@ footer.sticky-bottom {
       background: linear-gradient(135deg, color-mix(in srgb, var(--global-theme-color) 92%, #0ea5e9) 0%, var(--global-theme-color) 100%);
       color: var(--global-bg-color);
       box-shadow:
-        0 10px 22px color-mix(in srgb, var(--global-theme-color) 18%, transparent),
+        0 6px 14px color-mix(in srgb, var(--global-theme-color) 16%, transparent),
         inset 0 1px 0 color-mix(in srgb, white 22%, transparent);
     }
   }
@@ -910,14 +910,14 @@ footer.sticky-bottom {
 
     li {
       margin-bottom: 0;
-      padding: 0.85rem 0;
+      padding: 0.48rem 0;
       border-bottom: 1px solid var(--global-divider-color);
 
       .preview {
         width: 100%;
-        max-width: 145px;
-        border-radius: 10px;
-        box-shadow: 0 6px 16px rgba(15, 23, 42, 0.05);
+        max-width: 112px;
+        border-radius: 7px;
+        box-shadow: 0 4px 10px rgba(15, 23, 42, 0.045);
       }
 
       .publication-row {
@@ -932,8 +932,8 @@ footer.sticky-bottom {
         display: flex;
         flex-wrap: wrap;
         align-items: center;
-        gap: 0.34rem 0.5rem;
-        margin-bottom: 0.22rem;
+        gap: 0.22rem 0.34rem;
+        margin-bottom: 0.12rem;
       }
 
       .publication-venue {
@@ -944,9 +944,9 @@ footer.sticky-bottom {
         border: 0;
         background: transparent;
         color: var(--publication-accent);
-        font-size: 0.76rem;
+        font-size: 0.66rem;
         font-weight: 700;
-        letter-spacing: 0.08em;
+        letter-spacing: 0.06em;
         text-transform: uppercase;
 
         &:hover {
@@ -959,12 +959,12 @@ footer.sticky-bottom {
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        padding: 0.1rem 0.45rem;
+        padding: 0.06rem 0.36rem;
         border: 1px solid color-mix(in srgb, #16a34a 24%, var(--global-text-color-light));
         border-radius: 999px;
         background: color-mix(in srgb, #22c55e 8%, var(--global-bg-color));
         color: color-mix(in srgb, #15803d 42%, var(--global-text-color));
-        font-size: 0.66rem;
+        font-size: 0.58rem;
         font-weight: 700;
         line-height: 1.15;
         letter-spacing: 0.02em;
@@ -973,8 +973,8 @@ footer.sticky-bottom {
       }
 
       .title {
-        font-size: 1rem;
-        line-height: 1.35;
+        font-size: 0.94rem;
+        line-height: 1.26;
         font-weight: 600;
         letter-spacing: 0;
 
@@ -989,10 +989,10 @@ footer.sticky-bottom {
       }
 
       .author {
-        margin-top: 0.18rem;
+        margin-top: 0.08rem;
         color: var(--global-text-color-light);
-        font-size: 0.92rem;
-        line-height: 1.55;
+        font-size: 0.82rem;
+        line-height: 1.35;
 
         a {
           border-bottom: 1px dashed var(--global-theme-color);
@@ -1023,9 +1023,9 @@ footer.sticky-bottom {
       .periodical,
       .publication-note,
       .publication-highlight {
-        margin-top: 0.15rem;
-        font-size: 0.9rem;
-        line-height: 1.5;
+        margin-top: 0.08rem;
+        font-size: 0.82rem;
+        line-height: 1.35;
       }
 
       .periodical {
@@ -1035,7 +1035,7 @@ footer.sticky-bottom {
       .publication-topics {
         display: inline-flex;
         flex-wrap: wrap;
-        gap: 0.28rem 0.34rem;
+        gap: 0.18rem 0.24rem;
         min-width: 0;
       }
 
@@ -1043,12 +1043,12 @@ footer.sticky-bottom {
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        padding: 0.12rem 0.54rem;
+        padding: 0.06rem 0.36rem;
         border: 1px solid color-mix(in srgb, var(--global-theme-color) 16%, var(--global-text-color-light));
         border-radius: 999px;
         background: color-mix(in srgb, var(--global-theme-color) 5%, var(--global-bg-color));
         color: color-mix(in srgb, var(--global-theme-color) 28%, var(--global-text-color));
-        font-size: 0.69rem;
+        font-size: 0.62rem;
         font-weight: 600;
         line-height: 1.15;
         letter-spacing: 0.01em;
@@ -1085,10 +1085,10 @@ footer.sticky-bottom {
         display: inline-flex;
         align-items: center;
         flex-wrap: wrap;
-        gap: 0.28rem 0.45rem;
-        margin-top: 0.45rem;
-        padding: 0.28rem 0.72rem;
-        border-radius: 0.85rem;
+        gap: 0.2rem 0.32rem;
+        margin-top: 0.22rem;
+        padding: 0.18rem 0.5rem;
+        border-radius: 0.65rem;
         border: 1px solid color-mix(in srgb, #d97706 26%, var(--global-text-color-light));
         background:
           linear-gradient(
@@ -1097,7 +1097,7 @@ footer.sticky-bottom {
             color-mix(in srgb, #f59e0b 6%, var(--global-bg-color))
           );
         color: color-mix(in srgb, #92400e 34%, var(--global-text-color));
-        font-size: 0.76rem;
+        font-size: 0.68rem;
         font-weight: 600;
         line-height: 1.35;
         letter-spacing: 0.01em;
@@ -1107,11 +1107,11 @@ footer.sticky-bottom {
           content: "Highlight";
           display: inline-flex;
           align-items: center;
-          padding: 0.08rem 0.44rem;
+          padding: 0.04rem 0.32rem;
           border-radius: 999px;
           background: color-mix(in srgb, #f59e0b 16%, var(--global-bg-color));
           color: #9a3412;
-          font-size: 0.64rem;
+          font-size: 0.55rem;
           font-weight: 700;
           letter-spacing: 0.06em;
           text-transform: uppercase;
@@ -1133,8 +1133,8 @@ footer.sticky-bottom {
       .links {
         display: flex;
         flex-wrap: wrap;
-        gap: 0.38rem 0.42rem;
-        margin-top: 0.42rem;
+        gap: 0.22rem 0.28rem;
+        margin-top: 0.22rem;
         align-items: center;
 
         a {
@@ -1145,15 +1145,15 @@ footer.sticky-bottom {
           display: inline-flex;
           align-items: center;
           justify-content: center;
-          gap: 0.34rem;
+          gap: 0.22rem;
           max-width: 100%;
-          min-height: 1.72rem;
-          padding: 0.2rem 0.66rem;
+          min-height: 1.34rem;
+          padding: 0.1rem 0.42rem;
           border: 1px solid var(--publication-link-border);
-          border-radius: 0.9rem;
+          border-radius: 0.62rem;
           background: var(--publication-link-bg);
           color: var(--publication-link-text);
-          font-size: 0.75rem;
+          font-size: 0.66rem;
           font-weight: 600;
           letter-spacing: 0.01em;
           line-height: 1.2;
@@ -1170,12 +1170,12 @@ footer.sticky-bottom {
 
           &::before {
             content: "";
-            width: 0.32rem;
-            height: 0.32rem;
+            width: 0.22rem;
+            height: 0.22rem;
             flex-shrink: 0;
             border-radius: 999px;
             background: var(--publication-link-accent);
-            box-shadow: 0 0 0 0.12rem color-mix(in srgb, var(--publication-link-accent) 12%, transparent);
+            box-shadow: 0 0 0 0.08rem color-mix(in srgb, var(--publication-link-accent) 12%, transparent);
           }
 
           &:hover {
