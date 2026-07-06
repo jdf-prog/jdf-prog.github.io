@@ -59,12 +59,12 @@ $(document).ready(function() {
         class: 'publication-filter-indicator',
         'aria-hidden': 'true',
       });
-    let activeTopic = 'all';
-    let filterIndicatorFrame = null;
-
     const normalizeTopic = function(value) {
       return (value || '').toString().trim().toLowerCase();
     };
+    const defaultFilter = normalizeTopic($container.data('default-filter')) || 'all';
+    let activeTopic = defaultFilter;
+    let filterIndicatorFrame = null;
 
     const getButtons = function() {
       return $toolbar.find('.publication-filter');
@@ -169,6 +169,9 @@ $(document).ready(function() {
     const renderFilterButtons = function() {
       const topicMetadata = getTopicMetadata();
       const totalCount = getPublicationItems().length;
+      const selectedCount = getPublicationItems().filter(function() {
+        return $(this).find('.publication-row').first().data('selected') === true;
+      }).length;
       const topicEntries = Object.keys(topicMetadata).sort(function(a, b) {
         const countA = topicMetadata[a].count || 0;
         const countB = topicMetadata[b].count || 0;
@@ -180,7 +183,7 @@ $(document).ready(function() {
         return (topicMetadata[a].label || a).localeCompare(topicMetadata[b].label || b);
       });
 
-      if (activeTopic !== 'all' && !topicMetadata[activeTopic]) {
+      if (activeTopic !== 'all' && activeTopic !== 'selected' && !topicMetadata[activeTopic]) {
         activeTopic = 'all';
       }
 
@@ -190,6 +193,7 @@ $(document).ready(function() {
         $toolbar.append($filterIndicator);
       }
       $toolbar.append(createFilterButton('all', 'All', totalCount, activeTopic === 'all'));
+      $toolbar.append(createFilterButton('selected', 'Selected', selectedCount, activeTopic === 'selected'));
 
       topicEntries.forEach(function(topic) {
         $toolbar.append(
@@ -234,7 +238,8 @@ $(document).ready(function() {
           .split('|')
           .map(normalizeTopic)
           .filter(Boolean);
-        const isMatch = activeTopic === 'all' || topics.includes(activeTopic);
+        const isSelected = $item.find('.publication-row').first().data('selected') === true;
+        const isMatch = activeTopic === 'all' || (activeTopic === 'selected' && isSelected) || topics.includes(activeTopic);
         $item.prop('hidden', !isMatch);
       });
 
@@ -268,7 +273,7 @@ $(document).ready(function() {
     });
 
     renderFilterButtons();
-    setActiveTopic('all');
+    setActiveTopic(defaultFilter);
     window.addEventListener('resize', queueFilterIndicator);
   });
 

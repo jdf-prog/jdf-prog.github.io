@@ -28,7 +28,7 @@
   {% endif %}
 {% endif %}
 
-<div class="row publication-row" data-topics="{{ topic_values }}">
+<div class="row publication-row" data-topics="{{ topic_values }}" data-selected="{% if entry.selected == "true" or entry.selected == true %}true{% else %}false{% endif %}">
   <div id="{{entry.key}}" class="{% if has_preview %}col-lg-10 col-md-9{% else %}col-12{% endif %} publication-body">
     {% if entry.abbr or topic_values != "" %}
       <div class="publication-topline">

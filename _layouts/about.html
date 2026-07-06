@@ -193,11 +193,11 @@ layout: default
               <a href="{{ '/publications/' | relative_url }}">Full list</a>
             {% endif %}
           </div>
-          <div class="publications" data-publication-filters>
+          <div class="publications" data-publication-filters data-default-filter="selected">
             <div class="publication-filters" role="toolbar" aria-label="Publication topic filters"></div>
 
             <p class="publication-filter-empty" hidden>No publications match this topic yet.</p>
-            {% bibliography -f {{ site.scholar.bibliography }} -q @*[selected=true]* %}
+            {% bibliography -f {{ site.scholar.bibliography }} %}
           </div>
         </section>
       {% endif %}
