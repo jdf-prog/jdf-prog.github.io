@@ -44,6 +44,9 @@
 "TMLR 2025":
   url: https://jmlr.org/tmlr/
   color: "#5b9bd5"
+"TMLR 2026":
+  url: https://jmlr.org/tmlr/
+  color: "#5b9bd5"
 
 "CVPR":
   url: https://cvpr.thecvf.com
@@ -72,3 +75,15 @@
 "ICLR 2026":
   url: https://iclr.cc/
   color: "#00369f"
+
+"Tech Report":
+  url: https://arxiv.org
+  color: "#808080"
+
+"Benchmark":
+  url: https://autolab.moe/
+  color: "#4f46e5"
+
+"Preprint":
+  url: https://arxiv.org
+  color: "#f08080"
