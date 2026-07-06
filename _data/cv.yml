@@ -92,6 +92,11 @@
 - title: Honors and Awards
   type: time_table
   contents:
+    - year: 2026
+      items:
+        - Silver Reviewer, ICML 2026
+        - Best Paper @ ICML 2026 AI4Science Workshop, for FabScore
+        - Best Paper @ SPOT @ ICLR 2026, for VerlTool
     - year: 2025
       items:
         - Outstanding Paper Award, TMLR 2025, for MANTIS (1 / 1539 selected)
