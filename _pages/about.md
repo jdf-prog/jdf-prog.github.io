@@ -105,8 +105,6 @@ My research goal is to build multimodal language agents that can reason, use too
 - **LLM/VLM post-training:** [Nemotron 3 Super](https://research.nvidia.com/labs/nemotron/files/NVIDIA-Nemotron-3-Super-Technical-Report.pdf), [Nemotron-Cascade 2](https://huggingface.co/collections/nvidia/nemotron-cascade-2), [Mantis](https://tiger-ai-lab.github.io/Mantis/), [AceCoder](https://tiger-ai-lab.github.io/AceCoder/), [General-Reasoner](https://tiger-ai-lab.github.io/General-Reasoner/), [Critique-Coder](https://tiger-ai-lab.github.io/Critique-Coder/)
 - **Agentic Systems:** [DCI-Agent](https://arxiv.org/abs/2605.05242), [AutoLab](https://autolab.moe/), [VerlTool](https://github.com/TIGER-AI-Lab/verl-tool), [OpenResearcher](https://huggingface.co/spaces/OpenResearcher/OpenResearcher), [Nemotron 3 Super](https://research.nvidia.com/labs/nemotron/files/NVIDIA-Nemotron-3-Super-Technical-Report.pdf), [LLM-Blender](https://yuchenlin.xyz/LLM-Blender/)
 
-I am actively looking for full-time positions in industry research or engineering. Feel free to reach out by email if my background looks relevant.
-
 [0]: https://www.zju.edu.cn/english/
 [1]: https://shanzhenren.github.io/
 [2]: https://aisecure.github.io/
