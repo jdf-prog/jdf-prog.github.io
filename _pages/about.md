@@ -30,13 +30,6 @@ hero:
     - label: Miscellaneous
       url: "#miscellaneous"
 
-announcement:
-  label: I am on the job market for 2026!
-  text: Please feel free to reach out if you find my background a good fit for your organization.
-  actions:
-    - label: CV
-      url: /assets/pdf/Dongfu_CV.pdf
-
 featured_links:
   - title: Publications
     description: Full paper list, preprints, and bibliographic details.
