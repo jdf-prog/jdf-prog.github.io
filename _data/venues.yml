@@ -86,6 +86,10 @@
   url: https://iclr.cc/
   color: "#00369f"
 
+"COLM 2026":
+  url: https://colmweb.org/
+  color: "#00369f"
+
 "Tech Report":
   url: https://arxiv.org
   color: "#808080"
