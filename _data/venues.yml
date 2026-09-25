@@ -18,6 +18,13 @@
   url: https://2024.emnlp.org/
   color: "#dc143c"
 
+"EMNLP 2026":
+  url: https://aclanthology.org
+  color: "#dc143c"
+"EMNLP 2026 Findings":
+  url: https://aclanthology.org
+  color: "#dc143c"
+
 "NAACL":
   url: https://naacl.org
   color: "#dc143c"
@@ -66,6 +73,9 @@
   url: https://neurips.cc/
   color: "#00369f"
 "NeurIPS 2025":
+  url: https://neurips.cc/
+  color: "#00369f"
+"NeurIPS 2026":
   url: https://neurips.cc/
   color: "#00369f"
 
